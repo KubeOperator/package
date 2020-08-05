@@ -82,7 +82,7 @@ echo "+++++++++++++++++++++++++++++++++++下载 rpm ++++++++++++++++++++++++++++
   do
     rpm_name=`echo $rpm|awk -F= '{print $1}'`
     echo "下载 ${rpm_name} >>"
-    yumdownloader --destdir=${rpms_save_dirname}  `echo $rpm|awk -F= '{print $1}'`
+    yumdownloader --resolve --destdir=${rpms_save_dirname}  `echo $rpm|awk -F= '{print $1}'`
   done
 }
 
