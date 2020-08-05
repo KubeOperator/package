@@ -55,7 +55,7 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/bitnami/kubectl:1.16.3-debian-10-r85"
     "${local_hostname}:${registry_port}/bitnami/kubeapps-asset-syncer:1.10.2-scratch-r0"
     "${local_hostname}:${registry_port}/bitnami/kubectl:1.16.3-debian-10-r85"
-# ch"rtmuseuma
+# chartmuseum
     "${local_hostname}:${registry_port}/chartmuseum/chartmuseum:v0.12.0"
 # registry
     "${local_hostname}:${registry_port}/registry:2.7.1"
@@ -88,7 +88,7 @@ APPLICATION_IMAGES_ARM64=(
     "${local_hostname}:${registry_port}/bitnami/kubectl:1.16.3-debian-10-r85"
     "${local_hostname}:${registry_port}/bitnami/kubeapps-asset-syncer:1.10.2-scratch-r0"
     "${local_hostname}:${registry_port}/bitnami/kubectl:1.16.3-debian-10-r85"
-# ch"rtmuseuma
+# chartmuseum
     "${local_hostname}:${registry_port}/chartmuseum/chartmuseum:v0.12.0"
 # registry
     "${local_hostname}:${registry_port}/registry:2.7.1"

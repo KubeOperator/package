@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-
-save_dirname=/artifacts/ko-3.0/data/charts-kubeapps/images
-
 CURRENT_DIR=$(
    cd "$(dirname "$0")"
    pwd
