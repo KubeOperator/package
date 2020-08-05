@@ -1,0 +1,14 @@
+RPMS=(
+    ceph-common
+    nfs-utils
+    jq
+    conntrack-tools
+    bash-completion
+    libseccomp
+    psmisc
+    rsync
+    socat
+    ipset
+    ipvsadm
+    haproxy
+)
