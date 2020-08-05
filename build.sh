@@ -33,7 +33,7 @@ source ./requirements/rpms_list
 
 function prapre_dir() {
   mkdir -p $CURRENT_DIR/{raw,images,rpms}
-  raw_save_dirname=/artifacts/ko-3.0/data/charts-kubeapps/raw
+  raw_save_dirname=$CURRENT_DIR/raw
   rpms_save_dirname=$CURRENT_DIR/rpms
   images_save_dirname=$CURRENT_DIR/images
 }
