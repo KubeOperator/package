@@ -11,4 +11,5 @@ RPMS=(
     ipset
     ipvsadm
     haproxy
+    chrony
 )
