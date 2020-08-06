@@ -64,7 +64,7 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/kibana/kibana:7.6.2"
     "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
 # dashboard
-    ${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
+    "${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
 # prometheus
     "${local_hostname}:${registry_port}/prom/node-exporter:v0.18.1"
     "${local_hostname}:${registry_port}/coreos/kube-state-metrics:v1.9.5"
@@ -96,7 +96,7 @@ APPLICATION_IMAGES_ARM64=(
     "${local_hostname}:${registry_port}/kibana/kibana:7.6.2"
     "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
 # dashboard
-    ${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
+    "${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
 # prometheus
     "${local_hostname}:${registry_port}/prom/node-exporter:v0.18.1"
     "${local_hostname}:${registry_port}/carlosedp/kube-state-metrics:v1.9.5"

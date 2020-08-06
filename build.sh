@@ -50,14 +50,14 @@ echo "+++++++++++++++++++++++++++++++++++下载 Docker 镜像+++++++++++++++++++
   if [ ${architectures} = "amd64" ];then
   for image in ${APPLICATION_IMAGES_AMD64[@]}
     do
-      echo "下载 ${image} >>"
+      echo "AMD | 下载 ${image} >>"
       docker pull ${image}
       docker rmi ${image}
     done
   elif [ ${architectures} = "arm64" ]; then
   for image in ${APPLICATION_IMAGES_ARM64[@]}
     do
-      echo "下载 ${image} >>"
+      echo "ARM | 下载 ${image} >>"
       docker pull ${image}
       docker rmi ${image}
     done
