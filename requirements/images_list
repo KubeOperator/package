@@ -63,7 +63,6 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/fluentd_elasticsearch/fluentd:v2.8.0"
     "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
     "${local_hostname}:${registry_port}/kibana/kibana:7.6.2"
-    "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
 # dashboard
     "${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
     "${local_hostname}:${registry_port}/kubernetesui/metrics-scraper:v1.0.4"
@@ -73,7 +72,6 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/prom/alertmanager:v0.20.0"
     "${local_hostname}:${registry_port}/jimmidyson/configmap-reload:v0.3.0"
     "${local_hostname}:${registry_port}/prom/pushgateway:v1.0.1"
-    "${local_hostname}:${registry_port}/jimmidyson/configmap-reload:v0.3.0"
     "${local_hostname}:${registry_port}/prom/prometheus:v2.18.1"
 )
 
@@ -97,7 +95,6 @@ APPLICATION_IMAGES_ARM64=(
     "${local_hostname}:${registry_port}/fluentd_elasticsearch/fluentd:v2.8.0"
     "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
     "${local_hostname}:${registry_port}/kibana/kibana:7.6.2"
-    "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
 # dashboard
     "${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
     "${local_hostname}:${registry_port}/kubernetesui/metrics-scraper:v1.0.4"
@@ -107,6 +104,5 @@ APPLICATION_IMAGES_ARM64=(
     "${local_hostname}:${registry_port}/prom/alertmanager:v0.20.0"
     "${local_hostname}:${registry_port}/jimmidyson/configmap-reload:v0.3.0"
     "${local_hostname}:${registry_port}/prom/pushgateway:v1.0.1"
-    "${local_hostname}:${registry_port}/jimmidyson/configmap-reload:v0.3.0"
     "${local_hostname}:${registry_port}/prom/prometheus:v2.18.1"
 )
