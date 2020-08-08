@@ -1,4 +1,4 @@
-# KubeOperator 3.0 离线安装包工程
+# KubeOperator 3.0 KubeOpererator 3.0 离线模式安装部署包。
 
 KubeOperator 3.0 支持在线和离线环境下部署 K8s 集群。KubeOperator 内置 Nexus 服务，用来提供部署和管理 K8s 所需要的介质，包括：
 
