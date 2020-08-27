@@ -12,4 +12,5 @@ RPMS=(
     ipvsadm
     haproxy
     chrony
+    lvm2
 )
