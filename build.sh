@@ -7,14 +7,6 @@ CURRENT_DIR=$(
 
 os=`uname -a`
 
-# 仓库信息
-#local_hostname=172.16.10.65
-#repo_port=8082
-# k8s 版本
-#kube_version="v1.18.3"
-#kube_upgrade_version="v1.18.4"
-#wget_timeout=600
-
 # 判断系统架构
 if [[ $os =~ 'x86_64' ]];then
   architectures=amd64
