@@ -41,6 +41,8 @@ K8S_IMAGES=(
     npd_image="${local_hostname}:${registry_port}/kubeoperator/node-problem-detector:${npd_versioon}-${architectures}"
     # helm2 tiller image
     tiller_image="${local_hostname}:${registry_port}/kubeoperator/tiller:${helm_binaries_v2_version}"
+    # kube-bench image
+    kube_bench="${local_hostname}:${registry_port}/kubeoperator/kube-bench:${kube_bench_version}"
 )
 
 APPLICATION_IMAGES_AMD64=(

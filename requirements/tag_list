@@ -18,6 +18,7 @@ helm_binaries_v2_version="v2.16.9"
 helm_binaries_v3_version="v3.2.4"
 nginx_ingress_version="0.32.0"
 traefik_ingress_version="v2.2.1"
+kube_bench_version="v0.0.1-amd64"
 # 存储类镜像版本设置
 rbd_provisioner_version="v2.1.1-k8s1.11"
 nfs_provisioner_version="v3.1.0-k8s1.11"
