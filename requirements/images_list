@@ -14,9 +14,6 @@ K8S_IMAGES=(
     calico_pod2daemon_flexvol_image="${local_hostname}:${registry_port}/calico/pod2daemon-flexvol:${calico_version}-${architectures}"
     # calicoctl image 地址
     calicoctl_image="${local_hostname}:${registry_port}/calico/ctl:${calico_version}-${architectures}"
-    # weave image 地址
-    weave_kube_image="${local_hostname}:${registry_port}/weaveworks/weave-kube:${weave_version}"
-    weave_npc_image="${local_hostname}:${registry_port}/weaveworks/weave-npc:${weave_version}"
     # flannel image 地址
     flannel_image="${local_hostname}:${registry_port}/coreos/flannel:${flannel_version}-${architectures}"
     # ingress-controller 镜像地址
