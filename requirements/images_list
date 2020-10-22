@@ -61,7 +61,6 @@ APPLICATION_IMAGES_AMD64=(
 # efk
     "${local_hostname}:${registry_port}/fluentd_elasticsearch/fluentd:v2.8.0"
     "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
-    "${local_hostname}:${registry_port}/kibana/kibana:7.6.2"
 # dashboard
     "${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
     "${local_hostname}:${registry_port}/kubernetesui/metrics-scraper:v1.0.4"
@@ -75,25 +74,8 @@ APPLICATION_IMAGES_AMD64=(
 )
 
 APPLICATION_IMAGES_ARM64=(
-# kubeapps
-    "${local_hostname}:${registry_port}/bitnami/nginx:1.18.0-debian-10-r38"
-    "${local_hostname}:${registry_port}/bitnami/kubeapps-apprepository-controller:1.10.2-scratch-r0"
-    "${local_hostname}:${registry_port}/bitnami/kubeapps-assetsvc:1.10.2-scratch-r0"
-    "${local_hostname}:${registry_port}/bitnami/kubeapps-dashboard:1.10.2-debian-10-r0"
-    "${local_hostname}:${registry_port}/bitnami/nginx:1.18.0-debian-10-r38"
-    "${local_hostname}:${registry_port}/bitnami/kubeapps-tiller-proxy:1.10.2-scratch-r0"
-    "${local_hostname}:${registry_port}/postgres:11-alpine"
-    "${local_hostname}:${registry_port}/bitnami/kubectl:1.16.3-debian-10-r85"
-    "${local_hostname}:${registry_port}/bitnami/kubeapps-asset-syncer:1.10.2-scratch-r0"
-    "${local_hostname}:${registry_port}/bitnami/kubeapps-kubeops:1.10.2-scratch-r0"
-# chartmuseum
-    "${local_hostname}:${registry_port}/chartmuseum/chartmuseum:v0.12.0"
 # registry
     "${local_hostname}:${registry_port}/registry:2.7.1"
-# efk
-    "${local_hostname}:${registry_port}/fluentd_elasticsearch/fluentd:v2.8.0"
-    "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
-    "${local_hostname}:${registry_port}/kibana/kibana:7.6.2"
 # dashboard
     "${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
     "${local_hostname}:${registry_port}/kubernetesui/metrics-scraper:v1.0.4"
