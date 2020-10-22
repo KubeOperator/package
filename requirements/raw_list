@@ -55,7 +55,7 @@ RAW_ARM64=(
     # ----------------------- helm 仓库地址 --------------------
     helm3_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/helm/${helm_binaries_v3_version}/helm-${helm_binaries_v3_version}-linux-${architectures}.tar.gz"
     # ----------------------- Openstack VSphere 镜像下载地址 --------------------
-    openstack_image_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/openstack/kubeoperator_centos_7.6.1810-1.qcow2"
-    vsphere_vmdk_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-1.vmdk"
-    vsphere_ovf_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf"
+    # openstack_image_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/openstack/kubeoperator_centos_7.6.1810-1.qcow2"
+    # vsphere_vmdk_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-1.vmdk"
+    # vsphere_ovf_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf"
 )
