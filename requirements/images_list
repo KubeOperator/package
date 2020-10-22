@@ -27,8 +27,6 @@ K8S_IMAGES=(
     metrics_server_image="${local_hostname}:${registry_port}/kubeoperator/metrics-server:${metrics_server_version}-${architectures}"
     # npd image 地址
     npd_image="${local_hostname}:${registry_port}/kubeoperator/node-problem-detector:${npd_versioon}-${architectures}"
-    # helm2 tiller image
-    tiller_image="${local_hostname}:${registry_port}/kubeoperator/tiller:${helm_binaries_v2_version}"
     # kube-bench image
     kube_bench="${local_hostname}:${registry_port}/kubeoperator/kube-bench:${kube_bench_version}"
 )
@@ -78,6 +76,8 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/k8scsi/csi-snapshotter:${csi_snapshotter_image_version}"
     #rook_csi_attacher_image
     "${local_hostname}:${registry_port}/k8scsi/csi-attacher:${csi_attacher_image_version}"
+    # helm2 tiller image
+    "${local_hostname}:${registry_port}/kubeoperator/tiller:${helm_binaries_v2_version}"
 )
 
 APPLICATION_IMAGES_ARM64=(

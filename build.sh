@@ -64,13 +64,22 @@ echo "+++++++++++++++++++++++++++++++++++下载 Docker 镜像+++++++++++++++++++
 
 function download_raw() {
 echo "+++++++++++++++++++++++++++++++++++下载 二进制文件++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-
-  for raw in ${RAW[@]}
+  if [ ${architectures} = "amd64" ];then
+  for raw in ${RAW_AMD64[@]}
   do
     raw_name=`echo $raw|awk -F= '{print $1}'`
     echo "下载 ${raw_name} >>"
     wget --timeout=${wget_timeout} -nv `echo $raw|awk -F= '{print $2}'` -P ${raw_save_dirname}
   done
+  fi
+  if [ ${architectures} = "amd64" ];then
+  for raw in ${RAW_ARM64[@]}
+  do
+    raw_name=`echo $raw|awk -F= '{print $1}'`
+    echo "下载 ${raw_name} >>"
+    wget --timeout=${wget_timeout} -nv `echo $raw|awk -F= '{print $2}'` -P ${raw_save_dirname}
+  done
+  fi
 }
 
 function download_rpm() {
