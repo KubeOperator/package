@@ -72,7 +72,7 @@ echo "+++++++++++++++++++++++++++++++++++下载 二进制文件+++++++++++++++++
     wget --timeout=${wget_timeout} -nv `echo $raw|awk -F= '{print $2}'` -P ${raw_save_dirname}
   done
   fi
-  if [ ${architectures} = "amd64" ];then
+  if [ ${architectures} = "arm64" ];then
   for raw in ${RAW_ARM64[@]}
   do
     raw_name=`echo $raw|awk -F= '{print $1}'`
