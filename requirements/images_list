@@ -78,6 +78,13 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/k8scsi/csi-attacher:${csi_attacher_image_version}"
     # helm2 tiller image
     "${local_hostname}:${registry_port}/kubeoperator/tiller:${helm_binaries_v2_version}"
+# f5
+    "${local_hostname}:${registry_port}/kubeoperator/k8s-bigip-ctlr:1.9.2-amd64"
+# oceanstor csi
+    "${local_hostname}:${registry_port}/k8scsi/csi-provisioner:v1.4.0"
+    "${local_hostname}:${registry_port}/k8scsi/csi-attacher:v1.2.1"
+    "${local_hostname}:${registry_port}/k8scsi/csi-node-driver-registrar:v1.2.0"
+    "${local_hostname}:${registry_port}/kubeoperator/huawei-csi:2.2.9"
 )
 
 APPLICATION_IMAGES_ARM64=(

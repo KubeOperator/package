@@ -12,5 +12,6 @@ RPMS=(
     ipvsadm
     haproxy
     chrony
-    lvm2
+    iscsi-initiator-utils
+    iscsi-initiator-utils-iscsiuio
 )
