@@ -8,7 +8,7 @@ CURRENT_DIR=$(
 os=`uname -a`
 
 # 是否清理本地缓存的Docker镜像
-# clean_docker_iamge=enable/disable
+# clean_docker_image=enable/disable
 
 # 判断系统架构
 if [[ $os =~ 'x86_64' ]];then
@@ -41,7 +41,7 @@ echo "+++++++++++++++++++++++++++++++++++下载 Docker 镜像+++++++++++++++++++
       image_name=`echo $image|awk -F= '{print $1}'`
       echo "下载 ${image_name} >>"
       docker pull `echo ${image}|awk -F= '{print $2}'`
-      if [ ${clean_docker_iamge} == "enable" ];then
+      if [ ${clean_docker_image} == "enable" ];then
       docker rmi `echo $image|awk -F= '{print $2}'`
       fi
     done
@@ -50,14 +50,14 @@ echo "+++++++++++++++++++++++++++++++++++下载 Docker 镜像+++++++++++++++++++
     do
       echo "AMD | 下载 ${image} >>"
       docker pull ${image}
-      if [ ${clean_docker_iamge} == "enable" ];then docker rmi ${image};fi
+      if [ ${clean_docker_image} == "enable" ];then docker rmi ${image};fi
     done
   elif [ ${architectures} = "arm64" ]; then
   for image in ${APPLICATION_IMAGES_ARM64[@]}
     do
       echo "ARM | 下载 ${image} >>"
       docker pull ${image}
-      if [ ${clean_docker_iamge} == "enable" ];then docker rmi ${image};fi
+      if [ ${clean_docker_image} == "enable" ];then docker rmi ${image};fi
     done
   fi
 }
