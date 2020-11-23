@@ -14,4 +14,9 @@ RPMS=(
     chrony
     iscsi-initiator-utils
     iscsi-initiator-utils-iscsiuio
+    device-mapper
+    device-mapper-event
+    lvm2
+    device-mapper-multipath
+    kpartx
 )
