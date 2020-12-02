@@ -1,21 +1,28 @@
 K8S_IMAGES=(
     # Pod image 地址
-    coredns_image_name="${local_hostname}:${registry_port}/coredns/coredns:${coredns_version}"
+    coredns_image_name_old="${local_hostname}:${registry_port}/coredns/coredns:1.6.7"
+    coredns_image_name_new="${local_hostname}:${registry_port}/coredns/coredns:1.8.0"
     # pod_infra_container_image="k8s.gcr.io/pause:${pause_version}"
     # 基础容器 image 地址
     sandbox_image="${local_hostname}:${registry_port}/kubeoperator/pause:${pause_version}-${architectures}"
     # busybox_image image 地址
     busybox_image="${local_hostname}:${registry_port}/kubeoperator/busybox:${busybox_version}-${architectures}"
     # calico 相关镜像
-    calico_typha_image="${local_hostname}:${registry_port}/calico/typha:${calico_version}-${architectures}"
-    calico_cni_image="${local_hostname}:${registry_port}/calico/cni:${calico_version}-${architectures}"
-    calico_node_image="${local_hostname}:${registry_port}/calico/node:${calico_version}-${architectures}"
-    calico_kube_controllers_image="${local_hostname}:${registry_port}/calico/kube-controllers:${calico_version}-${architectures}"
-    calico_pod2daemon_flexvol_image="${local_hostname}:${registry_port}/calico/pod2daemon-flexvol:${calico_version}-${architectures}"
-    # calicoctl image 地址
-    calicoctl_image="${local_hostname}:${registry_port}/calico/ctl:${calico_version}-${architectures}"
+    calico_typha_image_old="${local_hostname}:${registry_port}/calico/typha:v3.14.1-${architectures}"
+    calico_typha_image_new="${local_hostname}:${registry_port}/calico/typha:v3.16.5-${architectures}"
+    calico_cni_image_old="${local_hostname}:${registry_port}/calico/cni:v3.14.1-${architectures}"
+    calico_cni_image_new="${local_hostname}:${registry_port}/calico/cni:v3.16.5-${architectures}"
+    calico_node_image_old="${local_hostname}:${registry_port}/calico/node:v3.14.1-${architectures}"
+    calico_node_image_new="${local_hostname}:${registry_port}/calico/node:v3.16.5-${architectures}"
+    calico_kube_controllers_image_old="${local_hostname}:${registry_port}/calico/kube-controllers:v3.14.1-${architectures}"
+    calico_kube_controllers_image_new="${local_hostname}:${registry_port}/calico/kube-controllers:v3.16.5-${architectures}"
+    calico_pod2daemon_flexvol_image_old="${local_hostname}:${registry_port}/calico/pod2daemon-flexvol:v3.14.1-${architectures}"
+    calico_pod2daemon_flexvol_image_new="${local_hostname}:${registry_port}/calico/pod2daemon-flexvol:v3.16.5-${architectures}"
+    calicoctl_image_old="${local_hostname}:${registry_port}/calico/ctl:v3.14.1-${architectures}"
+    calicoctl_image_new="${local_hostname}:${registry_port}/calico/ctl:v3.16.5-${architectures}"
     # flannel image 地址
-    flannel_image="${local_hostname}:${registry_port}/coreos/flannel:${flannel_version}-${architectures}"
+    flannel_image="${local_hostname}:${registry_port}/coreos/flannel:v0.12.0-${architectures}"
+    flannel_image="${local_hostname}:${registry_port}/coreos/flannel:v0.13.0-${architectures}"
     # ingress-controller 镜像地址
     nginx_ingress_image="${local_hostname}:${registry_port}/kubernetes-ingress-controller/nginx-ingress-controller:${nginx_ingress_version}"
     traefik_ingress_image="${local_hostname}:${registry_port}/kubeoperator/traefik:${traefik_ingress_version}"
@@ -46,7 +53,7 @@ APPLICATION_IMAGES_AMD64=(
 # chartmuseum
     "${local_hostname}:${registry_port}/chartmuseum/chartmuseum:v0.12.0"
 # registry
-    "${local_hostname}:${registry_port}/registry:2.7.1"
+    "${local_hostname}:${registry_port}/kubeoperator/registry:2.7.1-amd64"
 # efk
     "${local_hostname}:${registry_port}/fluentd_elasticsearch/fluentd:v2.8.0"
     "${local_hostname}:${registry_port}/elasticsearch/elasticsearch:7.6.2"
@@ -77,7 +84,8 @@ APPLICATION_IMAGES_AMD64=(
     #rook_csi_attacher_image
     "${local_hostname}:${registry_port}/k8scsi/csi-attacher:${csi_attacher_image_version}"
     # helm2 tiller image
-    "${local_hostname}:${registry_port}/kubeoperator/tiller:${helm_binaries_v2_version}"
+    "${local_hostname}:${registry_port}/kubeoperator/tiller:v2.16.9"
+    "${local_hostname}:${registry_port}/kubeoperator/tiller:v2.17.0"
 # f5
     "${local_hostname}:${registry_port}/kubeoperator/k8s-bigip-ctlr:1.9.2-amd64"
 # oceanstor csi
@@ -85,11 +93,14 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/k8scsi/csi-attacher:v1.2.1"
     "${local_hostname}:${registry_port}/k8scsi/csi-node-driver-registrar:v1.2.0"
     "${local_hostname}:${registry_port}/kubeoperator/huawei-csi:2.2.9"
+# loki
+    "${local_hostname}:${registry_port}/grafana/loki:2.0.0-amd64"
+    "${local_hostname}:${registry_port}/grafana/promtail:2.0.0-amd64"
 )
 
 APPLICATION_IMAGES_ARM64=(
 # registry
-    "${local_hostname}:${registry_port}/registry:2.7.1"
+    "${local_hostname}:${registry_port}/kubeoperator/registry:2.7.1-arm64"
 # dashboard
     "${local_hostname}:${registry_port}/kubernetesui/dashboard:v2.0.3"
     "${local_hostname}:${registry_port}/kubernetesui/metrics-scraper:v1.0.4"
@@ -100,4 +111,9 @@ APPLICATION_IMAGES_ARM64=(
     "${local_hostname}:${registry_port}/jimmidyson/configmap-reload:v0.3.0"
     "${local_hostname}:${registry_port}/prom/pushgateway:v1.0.1"
     "${local_hostname}:${registry_port}/prom/prometheus:v2.18.1"
+# loki
+    "${local_hostname}:${registry_port}/grafana/loki:2.0.0-arm64"
+    "${local_hostname}:${registry_port}/grafana/promtail:2.0.0-arm64"
+# chartmuseum
+    "${local_hostname}:${registry_port}/kubeoperator/chartmuseum:v0.12.0-arm64"
 )
