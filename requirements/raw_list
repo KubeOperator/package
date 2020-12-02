@@ -33,7 +33,7 @@ RAW_AMD64=(
     openstack_image_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/openstack/kubeoperator_centos_7.6.1810-1.qcow2"
     vsphere_vmdk_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-1.vmdk"
     vsphere_ovf_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf"
-    fusioncompute_vhd_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/fusioncompute/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.vhd"
+    fusioncompute_vhd_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/fusioncompute/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-vda.vhd"
     fusioncompute_ovf_download_url="http://${local_hostname}:${repo_port}/repository/oss-proxy/terraform/images/fusioncompute/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf"
 )
 
