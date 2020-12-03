@@ -20,4 +20,9 @@ RPMS=(
     nvidia-docker
     nvidia-docker2
     nvidia-container-runtime
+    device-mapper
+    device-mapper-event
+    lvm2
+    device-mapper-multipath
+    kpartx
 )
