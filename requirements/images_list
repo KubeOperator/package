@@ -85,6 +85,7 @@ APPLICATION_IMAGES_AMD64=(
     "${local_hostname}:${registry_port}/k8scsi/csi-attacher:v1.2.1"
     "${local_hostname}:${registry_port}/k8scsi/csi-node-driver-registrar:v1.2.0"
     "${local_hostname}:${registry_port}/kubeoperator/huawei-csi:2.2.9"
+    "${local_hostname}:${registry_port}/nvidia/k8s-device-plugin:1.0.0-beta"
 )
 
 APPLICATION_IMAGES_ARM64=(
