@@ -36,7 +36,7 @@ function prapre_dir() {
 
 function download_image() {
 echo "+++++++++++++++++++++++++++++++++++下载 Docker 镜像++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-  for image in ${K8S_IMAGES[@]}
+  for image in "${K8S_IMAGES[@]}"
     do
       image_name=`echo $image|awk -F= '{print $1}'`
       echo "下载 ${image_name} >>"
@@ -45,15 +45,15 @@ echo "+++++++++++++++++++++++++++++++++++下载 Docker 镜像+++++++++++++++++++
       docker rmi `echo $image|awk -F= '{print $2}'`
       fi
     done
-  if [ ${architectures} = "amd64" ];then
-  for image in ${APPLICATION_IMAGES_AMD64[@]}
+  if [ ${architectures} == "amd64" ];then
+  for image in "${APPLICATION_IMAGES_AMD64[@]}"
     do
       echo "AMD | 下载 ${image} >>"
       docker pull ${image}
       if [ ${clean_docker_image} == "enable" ];then docker rmi ${image};fi
     done
-  elif [ ${architectures} = "arm64" ]; then
-  for image in ${APPLICATION_IMAGES_ARM64[@]}
+  elif [ ${architectures} == "arm64" ]; then
+  for image in "${APPLICATION_IMAGES_ARM64[@]}"
     do
       echo "ARM | 下载 ${image} >>"
       docker pull ${image}
@@ -64,16 +64,16 @@ echo "+++++++++++++++++++++++++++++++++++下载 Docker 镜像+++++++++++++++++++
 
 function download_raw() {
 echo "+++++++++++++++++++++++++++++++++++下载 二进制文件++++++++++++++++++++++++++++++++++++++++++++++++++++++"
-  if [ ${architectures} = "amd64" ];then
-  for raw in ${RAW_AMD64[@]}
+  if [ ${architectures} == "amd64" ];then
+  for raw in "${RAW_AMD64[@]}"
   do
     raw_name=`echo $raw|awk -F= '{print $1}'`
     echo "下载 ${raw_name} >>"
     wget --timeout=${wget_timeout} -nv `echo $raw|awk -F= '{print $2}'` -P ${raw_save_dirname}
   done
   fi
-  if [ ${architectures} = "arm64" ];then
-  for raw in ${RAW_ARM64[@]}
+  if [ ${architectures} == "arm64" ];then
+  for raw in "${RAW_ARM64[@]}"
   do
     raw_name=`echo $raw|awk -F= '{print $1}'`
     echo "下载 ${raw_name} >>"
@@ -85,7 +85,7 @@ echo "+++++++++++++++++++++++++++++++++++下载 二进制文件+++++++++++++++++
 function download_rpm() {
 echo "+++++++++++++++++++++++++++++++++++下载 rpm ++++++++++++++++++++++++++++++++++++++++++++++++++++++"
   yum clean all && yum makecache
-  for rpm in ${RPMS[@]}
+  for rpm in "${RPMS[@]}"
   do
     rpm_name=`echo $rpm|awk -F= '{print $1}'`
     echo "下载 ${rpm_name} >>"
