@@ -25,4 +25,5 @@ RPMS=(
     lvm2
     device-mapper-multipath
     kpartx
+    rsync
 )
