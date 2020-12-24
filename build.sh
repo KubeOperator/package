@@ -85,12 +85,21 @@ echo "+++++++++++++++++++++++++++++++++++下载 二进制文件+++++++++++++++++
 function download_rpm() {
 echo "+++++++++++++++++++++++++++++++++++下载 rpm ++++++++++++++++++++++++++++++++++++++++++++++++++++++"
   yum clean all && yum makecache
-  for rpm in "${RPMS[@]}"
+  for rpm in "${RPMS_BASE[@]}"
   do
     rpm_name=`echo $rpm|awk -F= '{print $1}'`
     echo "下载 ${rpm_name} >>"
     yumdownloader --resolve --destdir=${rpms_save_dirname}  `echo $rpm|awk -F= '{print $1}'`
   done
+
+  if [ ${architectures} == "amd64" ];then
+  for rpm in "${RPMS_GPU[@]}"
+  do
+    rpm_name=`echo $rpm|awk -F= '{print $1}'`
+    echo "下载 ${rpm_name} >>"
+    yumdownloader --resolve --destdir=${rpms_save_dirname}  `echo $rpm|awk -F= '{print $1}'`
+  done
+  fi
 }
 
 function main() {

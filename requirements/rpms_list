@@ -1,4 +1,4 @@
-RPMS=(
+RPMS_BASE=(
     ceph-common
     nfs-utils
     jq
@@ -14,12 +14,6 @@ RPMS=(
     chrony
     iscsi-initiator-utils
     iscsi-initiator-utils-iscsiuio
-    dkms
-    pciutils
-    cuda-drivers
-    nvidia-docker
-    nvidia-docker2
-    nvidia-container-runtime
     device-mapper
     device-mapper-event
     lvm2
@@ -27,3 +21,12 @@ RPMS=(
     kpartx
     sshpass
 )
+
+RPMS_GPU=(
+     dkms
+     pciutils
+     cuda-drivers
+     nvidia-docker
+     nvidia-docker2
+     nvidia-container-runtime
+ )
