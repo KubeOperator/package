@@ -20,6 +20,5 @@ raw_url = {
     # ----------------------- 存储所需二进制文件下载地址 --------------------
     'huawei_csi_passwdencrypt_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/oceanstor/{architectures}/passwdEncrypt',
     # ----------------------- helm 仓库地址 --------------------
-    'helm3_download_url_old': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/v3.2.4/helm-v3.2.4-linux-{architectures}.tar.gz',
-    'helm3_download_url_new': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/v3.4.1/helm-v3.4.1-linux-{architectures}.tar.gz'
+    'helm3_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/{helm_v3_version}/helm-{helm_v3_version}-linux-{architectures}.tar.gz'
 }

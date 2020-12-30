@@ -26,8 +26,8 @@ rpms_base={
 rpms_gpu={
     'dkms',
     'pciutils',
-    'cuda - drivers',
-    'nvidia - docker',
-    'nvidia - docker2',
-    'nvidia - container - runtime'
+    'cuda-drivers',
+    'nvidia-docker',
+    'nvidia-docker2',
+    'nvidia-container-runtime'
 }

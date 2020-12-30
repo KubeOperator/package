@@ -79,6 +79,9 @@ app_images={
     '{local_hostname}:{registry_port}/nvidia/k8s-device-plugin:1.0.0-beta',
     # loki
     '{local_hostname}:{registry_port}/grafana/loki:2.0.0-amd64',
-    '{local_hostname}:{registry_port}/grafana/promtail:2.0.0-amd64'
+    '{local_hostname}:{registry_port}/grafana/promtail:2.0.0-amd64',
+    # istio
+    '{local_hostname}:{registry_port}/istio/pilot:{istio_version}',
+    '{local_hostname}:{registry_port}/istio/proxyv2:{istio_version}'
 }
 

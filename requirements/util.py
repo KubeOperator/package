@@ -89,10 +89,17 @@ def download_images(kube_version):
             print(cmd)
 
         separate('Rpm download |',common.get('architectures'))
-        for name in rpms.rpms_base:
-            cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + name
+        for rpm in rpms.rpms_base:
+            cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
             print(cmd)
             # system(cmd)
+
+        if common.get('architectures')  == 'amd64':
+            separate('NVIDIA rpm download |', common.get('architectures'))
+            for rpm in rpms.rpms_gpu:
+                cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
+                print(cmd)
+                # system(cmd)
 
         separate('Download finished |',common.get('architectures'))
 

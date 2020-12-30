@@ -25,10 +25,8 @@ raw_url = {
     'govc_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/govc/{govc_version}/{architectures}/govc_linux_{architectures}.gz',
     'huawei_csi_passwdencrypt_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/oceanstor/{architectures}/passwdEncrypt',
     # ----------------------- helm 仓库地址 --------------------
-    'helm2_download_url_old': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/v2.16.9/helm-v2.16.9-linux-{architectures}.tar.gz',
-    'helm2_download_url_new': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/v2.17.0/helm-v2.17.0-linux-{architectures}.tar.gz',
-    'helm3_download_url_old': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/v3.2.4/helm-v3.2.4-linux-{architectures}.tar.gz',
-    'helm3_download_url_new': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/v3.4.1/helm-v3.4.1-linux-{architectures}.tar.gz',
+    'helm2_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/{helm_v2_version}/helm-{helm_v2_version}-linux-{architectures}.tar.gz',
+    'helm3_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/{helm_v3_version}/helm-{helm_v3_version}-linux-{architectures}.tar.gz',
     # ----------------------- Openstack VSphere 镜像下载地址 --------------------
     'openstack_image_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/openstack/kubeoperator_centos_7.6.1810-1.qcow2',
     'vsphere_vmdk_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-1.vmdk',
