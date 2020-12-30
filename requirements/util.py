@@ -51,15 +51,6 @@ common = {
     'kube_upgrade_version': sys.argv[2]
 }
 
-# kubernetes 版本管理
-def version_mg(vs):
-    v = {
-        'v1.18.4': version.v1_18_4,
-        'v1.18.6' : version.v1_18_6,
-    }
-
-    return v.get(vs,"没有数据")
-
 def separate(n, t):
     print("********************",n,t,"********************")
 
@@ -69,7 +60,7 @@ def download_images(kube_version):
         for name, value in images.k8s_images.items():
             url = value
             k = dict()
-            k.update(version_mg(kube_version))
+            k.update(version.version_mg(kube_version))
             k.update(common)
             url = url.format(**k)
             cmd_pull = 'echo docker pull '+url
@@ -83,7 +74,7 @@ def download_images(kube_version):
             i += 1
             k = dict()
             k.update(common)
-            k.update(version_mg(kube_version))
+            k.update(version.version_mg(kube_version))
             img = image.format(**k)
             print(i,'app:',img)
 
@@ -91,7 +82,7 @@ def download_images(kube_version):
         for name, value in raw.raw_url.items():
             url = value
             k = dict()
-            k.update(version_mg(kube_version))
+            k.update(version.version_mg(kube_version))
             k.update(common)
             url = url.format(**k)
             cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -p '+ raw_save_dirname

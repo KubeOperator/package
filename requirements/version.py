@@ -1,3 +1,11 @@
+# kubernetes 版本管理
+def version_mg(vs):
+    v = {
+        'v1.18.4': v1_18_4,
+        'v1.18.6' : v1_18_6,
+    }
+    return v.get(vs,"没有数据")
+
 v1_18_4 =  {
     'coredns_version': '1.8.0',
     'pause_version':  '3.2',
