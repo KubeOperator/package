@@ -22,10 +22,10 @@ else
   ansible_architecture=x86_64
 fi
 
-source ./requirements/tag_list
-source ./requirements/images_list
-source ./requirements/raw_list
-source ./requirements/rpms_list
+source ./data/tag_list
+source ./data/images_list
+source ./data/raw_list
+source ./data/rpms_list
 
 function prapre_dir() {
   mkdir -p $CURRENT_DIR/{raw,images,rpms}

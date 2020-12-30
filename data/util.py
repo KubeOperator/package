@@ -1,6 +1,6 @@
 import socket,platform,sys
 from os import system,mkdir,getcwd
-from requirements import version
+from data import version
 
 # 获取系统平台架构
 def get_host_arch():
@@ -13,9 +13,9 @@ def get_host_arch():
 
 
 if get_host_arch() == 'amd64':
-    from requirements.amd64 import images, raw, rpms
+    from data.amd64 import images, raw, rpms
 elif get_host_arch() == 'arm64':
-    from requirements.arm64 import images, raw, rpms
+    from data.arm64 import images, raw, rpms
 
 
 
@@ -50,6 +50,31 @@ common = {
     'kube_version': sys.argv[1],
     'kube_upgrade_version': sys.argv[2]
 }
+
+def create_yum_repo():
+    repo = open("/etc/yum.repos.d/kubeops.repo","w")
+    ip = get_host_ip()
+    repo = """
+    [Centos-Base]
+    name=CentOS Base
+    baseurl=http://{ip}:8081/repository/centos-base/7/extras/$basearch/
+    enabled=1
+    gpgcheck=0
+    
+    [Centos-Extras]
+    name=CentOS Extras
+    baseurl=http://{ip}:8081/repository/centos-base/7/os/$basearch/
+    enabled=1
+    gpgcheck=0
+    
+    [Centos-epel]
+    name=CentOS epel
+    baseurl=http://{ip}:8081/repository/centos-epel/7/$basearch/
+    enabled=1
+    gpgcheck=0
+    """
+    repo.write(repo.format(ip=ip))
+    repo.close()
 
 def separate(n, t):
     print("********************",n,t,"********************")
@@ -88,7 +113,7 @@ def download(kube_version):
             k.update(version.version_mg(kube_version))
             k.update(common)
             url = url.format(**k)
-            cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -p '+ raw_save_dirname
+            cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -P '+ raw_save_dirname
             system(cmd)
 
         print('\n')
@@ -109,5 +134,6 @@ def download(kube_version):
         separate('Download finished |',common.get('architectures'))
 
 def run():
+    create_yum_repo
     kube_version = common.get('kube_version')
     download(kube_version)
