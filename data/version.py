@@ -29,27 +29,27 @@ v1_18_4 =  {
     'csi_provisioner_image_version': 'v1.4.0',
     'csi_snapshotter_image_version': 'v1.2.2',
     'csi_attacher_image_version': 'v2.1.0',
-    #etcd版本
+    # etcd版本
     'etcd_version':'v3.4.9',
-    #docker版本
+    # docker版本
     'docker_version':'19.03.9',
-    #containerd版本
+    # containerd版本
     'containerd_version':'1.3.6',
-    #flannel版本
+    # flannel版本
     'flannel_version':'v0.12.0',
-    #calico版本
+    # calico版本
     'calico_version':'v3.14.1',
-    #coredns版本
+    # coredns版本
     'coredns_version':'1.6.7',
-    #helm v2 版本
+    # helm v2 版本
     'helm_v2_version':'v2.16.9',
-    #helm v3 版本
+    # helm v3 版本
     'helm_v3_version':'v3.2.4',
-    #nginx-ingress版本
+    # nginx-ingress版本
     'nginx_ingress_version':'0.33.0',
-    #traefik-ingress版本
+    # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
-    #metrics-server版本
+    # metrics-server版本
     'metrics_server_version':'v0.3.6',
     'istio_version': '1.8.0'
 }
@@ -74,27 +74,27 @@ v1_18_6 =  {
     'csi_provisioner_image_version': 'v1.4.0',
     'csi_snapshotter_image_version': 'v1.2.2',
     'csi_attacher_image_version': 'v2.1.0',
-    #etcd版本
+    # etcd版本
     'etcd_version':'v3.4.9',
-    #docker版本
+    # docker版本
     'docker_version':'19.03.9',
-    #containerd版本
+    # containerd版本
     'containerd_version':'1.3.6',
-    #flannel版本
+    # flannel版本
     'flannel_version':'v0.12.0',
-    #calico版本
+    # calico版本
     'calico_version':'v3.14.1',
-    #coredns版本
+    # coredns版本
     'coredns_version':'1.6.7',
-    #helm v2 版本
+    # helm v2 版本
     'helm_v2_version':'v2.16.9',
-    #helm v3 版本
+    # helm v3 版本
     'helm_v3_version':'v3.2.4',
-    #nginx-ingress版本
+    # nginx-ingress版本
     'nginx_ingress_version':'0.33.0',
-    #traefik-ingress版本
+    # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
-    #metrics-server版本
+    # metrics-server版本
     'metrics_server_version':'v0.3.6',
     'istio_version': '1.8.0'
 }
@@ -119,27 +119,27 @@ v1_18_8 =  {
     'csi_provisioner_image_version': 'v1.4.0',
     'csi_snapshotter_image_version': 'v1.2.2',
     'csi_attacher_image_version': 'v2.1.0',
-    #etcd版本
+    # etcd版本
     'etcd_version':'v3.4.9',
-    #docker版本
+    # docker版本
     'docker_version':'19.03.9',
-    #containerd版本
+    # containerd版本
     'containerd_version':'1.3.6',
-    #flannel版本
+    # flannel版本
     'flannel_version':'v0.12.0',
-    #calico版本
+    # calico版本
     'calico_version':'v3.14.1',
-    #coredns版本
+    # coredns版本
     'coredns_version':'1.6.7',
-    #helm v2 版本
+    # helm v2 版本
     'helm_v2_version':'v2.16.9',
-    #helm v3 版本
+    # helm v3 版本
     'helm_v3_version':'v3.2.4',
-    #nginx-ingress版本
+    # nginx-ingress版本
     'nginx_ingress_version':'0.33.0',
-    #traefik-ingress版本
+    # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
-    #metrics-server版本
+    # metrics-server版本
     'metrics_server_version':'v0.3.6',
     'istio_version': '1.8.0'
 }
@@ -164,27 +164,27 @@ v1_18_10 =  {
     'csi_provisioner_image_version': 'v1.4.0',
     'csi_snapshotter_image_version': 'v1.2.2',
     'csi_attacher_image_version': 'v2.1.0',
-    #etcd版本
+    # etcd版本
     'etcd_version':'v3.4.9',
-    #docker版本
+    # docker版本
     'docker_version':'19.03.9',
-    #containerd版本
+    # containerd版本
     'containerd_version':'1.3.6',
-    #flannel版本
+    # flannel版本
     'flannel_version':'v0.12.0',
-    #calico版本
+    # calico版本
     'calico_version':'v3.14.1',
-    #coredns版本
+    # coredns版本
     'coredns_version':'1.6.7',
-    #helm v2 版本
+    # helm v2 版本
     'helm_v2_version':'v2.16.9',
-    #helm v3 版本
+    # helm v3 版本
     'helm_v3_version':'v3.2.4',
-    #nginx-ingress版本
+    # nginx-ingress版本
     'nginx_ingress_version':'0.33.0',
-    #traefik-ingress版本
+    # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
-    #metrics-server版本
+    # metrics-server版本
     'metrics_server_version':'v0.3.6',
     'istio_version': '1.8.0'
 }
@@ -209,27 +209,27 @@ v1_18_12 =  {
     'csi_provisioner_image_version': 'v1.4.0',
     'csi_snapshotter_image_version': 'v1.2.2',
     'csi_attacher_image_version': 'v2.1.0',
-    #etcd版本
+    # etcd版本
     'etcd_version':'v3.4.9',
-    #docker版本
+    # docker版本
     'docker_version':'19.03.9',
-    #containerd版本
+    # containerd版本
     'containerd_version':'1.4.1',
-    #flannel版本
+    # flannel版本
     'flannel_version':'v0.13.0',
-    #calico版本
+    # calico版本
     'calico_version':'v3.16.5',
-    #coredns版本
+    # coredns版本
     'coredns_version':'1.8.0',
-    #helm v2 版本
+    # helm v2 版本
     'helm_v2_version':'v2.17.0',
-    #helm v3 版本
+    # helm v3 版本
     'helm_v3_version':'v3.4.1',
-    #nginx-ingress版本
+    # nginx-ingress版本
     'nginx_ingress_version':'0.33.0',
-    #traefik-ingress版本
+    # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
-    #metrics-server版本
+    # metrics-server版本
     'metrics_server_version':'v0.3.6',
     'istio_version': '1.8.0'
 }
