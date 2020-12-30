@@ -12,10 +12,10 @@ def get_host_arch():
     return os
 
 
-# if get_host_arch() == 'amd64':
-#     from requirements.amd64 import images, raw, rpms
-# elif get_host_arch() == 'arm64':
-from requirements.arm64 import images, raw, rpms
+if get_host_arch() == 'amd64':
+    from requirements.amd64 import images, raw, rpms
+elif get_host_arch() == 'arm64':
+    from requirements.arm64 import images, raw, rpms
 
 
 
