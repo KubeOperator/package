@@ -55,7 +55,7 @@ def separate(n, t):
     print("********************",n,t,"********************")
 
 # 下载
-def download_images(kube_version):
+def download(kube_version):
         separate('K8S image pull |',common.get('architectures'))
         for name, value in images.k8s_images.items():
             url = value
@@ -63,20 +63,23 @@ def download_images(kube_version):
             k.update(version.version_mg(kube_version))
             k.update(common)
             url = url.format(**k)
-            cmd_pull = 'echo docker pull '+url
-            cmd_remove = 'echo docker rmi -f '+url
+            cmd_pull = 'docker pull '+url
+            cmd_remove = 'docker rmi -f '+url
             system(cmd_pull)
             system(cmd_remove)
-        i = 0
+        print('\n')
 
         separate('App image pull |',common.get('architectures'))
         for image in images.app_images:
-            i += 1
             k = dict()
             k.update(common)
             k.update(version.version_mg(kube_version))
             img = image.format(**k)
-            print(i,'app:',img)
+            cmd_pull = 'docker pull '+img
+            cmd_remove = 'docker rmi -f '+img
+            system(cmd_pull)
+            system(cmd_remove)
+        print('\n')
 
         separate('Raw downalod |',common.get('architectures'))
         for name, value in raw.raw_url.items():
@@ -86,23 +89,25 @@ def download_images(kube_version):
             k.update(common)
             url = url.format(**k)
             cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -p '+ raw_save_dirname
-            print(cmd)
+            system(cmd)
+
+        print('\n')
 
         separate('Rpm download |',common.get('architectures'))
         for rpm in rpms.rpms_base:
             cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
-            print(cmd)
-            # system(cmd)
+            system(cmd)
+        print('\n')
 
         if common.get('architectures')  == 'amd64':
             separate('NVIDIA rpm download |', common.get('architectures'))
             for rpm in rpms.rpms_gpu:
                 cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
-                print(cmd)
-                # system(cmd)
+                system(cmd)
+        print('\n')
 
         separate('Download finished |',common.get('architectures'))
 
 def run():
     kube_version = common.get('kube_version')
-    download_images(kube_version)
+    download(kube_version)
