@@ -1,6 +1,6 @@
 import socket,platform,sys
 from os import system,mkdir,getcwd
-
+from requirements import version
 
 # 获取系统平台架构
 def get_host_arch():
@@ -12,10 +12,10 @@ def get_host_arch():
     return os
 
 
-if get_host_arch() == 'amd64':
-    from requirements.amd64 import images, raw, rpms, version
-elif get_host_arch() == 'arm64':
-    from requirements.arm64 import images, raw, rpms, version
+# if get_host_arch() == 'amd64':
+#     from requirements.amd64 import images, raw, rpms
+# elif get_host_arch() == 'arm64':
+from requirements.arm64 import images, raw, rpms
 
 
 
@@ -54,15 +54,19 @@ common = {
 # kubernetes 版本管理
 def version_mg(vs):
     v = {
-        'v1.18.6' : version.v1_18_4,
-        'v1.18.8' : version.v1_18_6,
+        'v1.18.4': version.v1_18_4,
+        'v1.18.6' : version.v1_18_6,
     }
 
     return v.get(vs,"没有数据")
 
+def separate(n, t):
+    print("********************",n,t,"********************")
+
 # 下载
 def download_images(kube_version):
-        for name, value in images.images.items():
+        separate('K8S image pull |',common.get('architectures'))
+        for name, value in images.k8s_images.items():
             url = value
             k = dict()
             k.update(version_mg(kube_version))
@@ -72,7 +76,18 @@ def download_images(kube_version):
             cmd_remove = 'echo docker rmi -f '+url
             system(cmd_pull)
             system(cmd_remove)
+        i = 0
 
+        separate('App image pull |',common.get('architectures'))
+        for image in images.app_images:
+            i += 1
+            k = dict()
+            k.update(common)
+            k.update(version_mg(kube_version))
+            img = image.format(**k)
+            print(i,'app:',img)
+
+        separate('Raw downalod |',common.get('architectures'))
         for name, value in raw.raw_url.items():
             url = value
             k = dict()
@@ -82,11 +97,13 @@ def download_images(kube_version):
             cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -p '+ raw_save_dirname
             print(cmd)
 
+        separate('Rpm download |',common.get('architectures'))
         for name in rpms.rpms_base:
             cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + name
             print(cmd)
             # system(cmd)
 
+        separate('Download finished |',common.get('architectures'))
 
 def run():
     kube_version = common.get('kube_version')
