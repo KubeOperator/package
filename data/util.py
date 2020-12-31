@@ -163,6 +163,6 @@ def download(kube_version):
     separate('Download finished |',common.get('architectures'))
 
 def run():
-    create_yum_repo
+    create_yum_repo()
     kube_version = common.get('kube_version')
     download(kube_version)
