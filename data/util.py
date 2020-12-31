@@ -101,15 +101,25 @@ gpgcheck=0
 
 
 def create_yum_repo():
-    k_repo = open("/etc/yum.repos.d/kubeops.repo","w")
-    ip = get_host_ip()
-    k_repo.write(kubeops_repo.format(ip=ip))
-    k_repo.close()
+    try:
+        k_repo = open("/etc/yum.repos.d/kubeops.repo","w")
+        ip = get_host_ip()
+        k_repo.write(kubeops_repo.format(ip=ip))
+    except IOError:
+        print("Error: 没有找到文件或读取文件失败")
+    else:
+        print("kubeops.repo: 写入成功")
+        k_repo.close()
 
     if common.get('architectures') == "amd64":
-        g_repo = open("/etc/yum.repos.d/gpu.repo", "w")
-        g_repo.write(gpu_repo.format(ip=ip))
-        g_repo.close()
+        try:
+            g_repo = open("/etc/yum.repos.d/gpu.repo", "w")
+            g_repo.write(gpu_repo.format(ip=ip))
+        except IOError:
+            print("Error: 没有找到文件或读取文件失败")
+        else:
+            print("gpu.repo: 写入成功")
+            g_repo.close()
 
 def separate(n, t):
     print("********************",n,t,"********************")
@@ -170,5 +180,5 @@ def download(kube_version):
 
 def run():
     create_yum_repo()
-    kube_version = common.get('kube_version')
-    download(kube_version)
+    # kube_version = common.get('kube_version')
+    # download(kube_version)
