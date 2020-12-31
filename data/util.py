@@ -142,7 +142,7 @@ def download(kube_version):
         k.update(version.version_mg(kube_version))
         k.update(common)
         url = url.format(**k)
-        cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -P '+ raw_save_dirname
+        cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P '+ raw_save_dirname
         system(cmd)
 
     print('\n')
