@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
 # kubernetes 版本管理
 def version_mg(vs):
     v = {

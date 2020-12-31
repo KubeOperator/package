@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
 raw_url = {
     # ----------------------- k8s 二进制文件下载地址 --------------------
     'k8s_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/k8s/{kube_version}/{architectures}/k8s.tar.gz',

@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# coding: utf-8
+
 k8s_images = {
     # Pod image 地址
     'coredns_image_name': '{local_hostname}:{registry_port}/coredns/coredns:{coredns_version}',
