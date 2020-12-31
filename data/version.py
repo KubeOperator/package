@@ -15,7 +15,7 @@ def version_mg(vs):
 v1_18_4 =  {
     'pause_version':  '3.2',
     'busybox_version': '1.28',
-    'crictl_version': 'v3.16.5',
+    'crictl_version': 'v1.18.0',
     'npd_versioon': 'v0.8.1',
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
@@ -60,7 +60,7 @@ v1_18_4 =  {
 v1_18_6 =  {
     'pause_version':  '3.2',
     'busybox_version': '1.28',
-    'crictl_version': 'v3.16.5',
+    'crictl_version': 'v1.18.0',
     'npd_versioon': 'v0.8.1',
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
@@ -105,7 +105,7 @@ v1_18_6 =  {
 v1_18_8 =  {
     'pause_version':  '3.2',
     'busybox_version': '1.28',
-    'crictl_version': 'v3.16.5',
+    'crictl_version': 'v1.18.0',
     'npd_versioon': 'v0.8.1',
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
@@ -150,7 +150,7 @@ v1_18_8 =  {
 v1_18_10 =  {
     'pause_version':  '3.2',
     'busybox_version': '1.28',
-    'crictl_version': 'v3.16.5',
+    'crictl_version': 'v1.18.0',
     'npd_versioon': 'v0.8.1',
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
@@ -195,7 +195,7 @@ v1_18_10 =  {
 v1_18_12 =  {
     'pause_version':  '3.2',
     'busybox_version': '1.28',
-    'crictl_version': 'v3.16.5',
+    'crictl_version': 'v1.18.0',
     'npd_versioon': 'v0.8.1',
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
