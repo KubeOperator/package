@@ -180,5 +180,5 @@ def download(kube_version):
 
 def run():
     create_yum_repo()
-    # kube_version = common.get('kube_version')
-    # download(kube_version)
+    kube_version = common.get('kube_version')
+    download(kube_version)
