@@ -54,57 +54,60 @@ common = {
     'kube_upgrade_version': sys.argv[2]
 }
 
+kubeops_repo = """
+[Centos-Base]
+name=CentOS Base
+baseurl=http://{ip}:8081/repository/centos-base/7/extras/$basearch/
+enabled=1
+gpgcheck=0
+
+[Centos-Extras]
+name=CentOS Extras
+baseurl=http://{ip}:8081/repository/centos-base/7/os/$basearch/
+enabled=1
+gpgcheck=0
+
+[Centos-epel]
+name=CentOS epel
+baseurl=http://{ip}:8081/repository/centos-epel/7/$basearch/
+enabled=1
+gpgcheck=0
+"""
+
+gpu_repo = """
+[Centos-CUDA]
+name=CentOS CUDA
+baseurl=http://{ip}:8081/repository/centos-cuda/rhel7/$basearch/
+enabled=1
+gpgcheck=0
+
+[Centos-libnvidia-containe]
+name=CentOS libnvidia-containe
+baseurl=http://{ip}:8081/repository/libnvidia-container/centos7/$basearch/
+enabled=1
+gpgcheck=0
+
+[Centos-nvidia-container-runtime]
+name=nvidia-container-runtime
+baseurl=http://{ip}:8081/repository/nvidia-container-runtime/centos7/$basearch
+gpgcheck=0
+enabled=1
+
+[Centos-nvidia-docker]
+name=nvidia-docker
+baseurl=http://{ip}:8081/repository/nvidia-docker/centos7/$basearch
+gpgcheck=0
+"""
+
+
 def create_yum_repo():
     k_repo = open("/etc/yum.repos.d/kubeops.repo","w")
     ip = get_host_ip()
-    kubeops_repo = """
-    [Centos-Base]
-    name=CentOS Base
-    baseurl=http://{ip}:8081/repository/centos-base/7/extras/$basearch/
-    enabled=1
-    gpgcheck=0
-    
-    [Centos-Extras]
-    name=CentOS Extras
-    baseurl=http://{ip}:8081/repository/centos-base/7/os/$basearch/
-    enabled=1
-    gpgcheck=0
-    
-    [Centos-epel]
-    name=CentOS epel
-    baseurl=http://{ip}:8081/repository/centos-epel/7/$basearch/
-    enabled=1
-    gpgcheck=0
-    """
     k_repo.write(kubeops_repo.format(ip=ip))
     k_repo.close()
 
     if common.get('architectures') == "amd64":
         g_repo = open("/etc/yum.repos.d/gpu.repo", "w")
-        gpu_repo = """
-        [Centos-CUDA]
-        name=CentOS CUDA
-        baseurl=http://{ip}:8081/repository/centos-cuda/rhel7/$basearch/
-        enabled=1
-        gpgcheck=0
-        
-        [Centos-libnvidia-containe]
-        name=CentOS libnvidia-containe
-        baseurl=http://{ip}:8081/repository/libnvidia-container/centos7/$basearch/
-        enabled=1
-        gpgcheck=0
-        
-        [Centos-nvidia-container-runtime]
-        name=nvidia-container-runtime
-        baseurl=http://{ip}:8081/repository/nvidia-container-runtime/centos7/$basearch
-        gpgcheck=0
-        enabled=1
-        
-        [Centos-nvidia-docker]
-        name=nvidia-docker
-        baseurl=http://{ip}:8081/repository/nvidia-docker/centos7/$basearch
-        gpgcheck=0
-        """
         g_repo.write(gpu_repo.format(ip=ip))
         g_repo.close()
 
