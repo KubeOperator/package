@@ -52,9 +52,9 @@ common = {
 }
 
 def create_yum_repo():
-    repo = open("/etc/yum.repos.d/kubeops.repo","w")
+    k_repo = open("/etc/yum.repos.d/kubeops.repo","w")
     ip = get_host_ip()
-    repo = """
+    kubeops_repo = """
     [Centos-Base]
     name=CentOS Base
     baseurl=http://{ip}:8081/repository/centos-base/7/extras/$basearch/
@@ -73,65 +73,94 @@ def create_yum_repo():
     enabled=1
     gpgcheck=0
     """
-    repo.write(repo.format(ip=ip))
-    repo.close()
+    k_repo.write(kubeops_repo.format(ip=ip))
+    k_repo.close()
+
+    if common.get('architectures') == "amd64":
+        g_repo = open("/etc/yum.repos.d/gpu.repo", "w")
+        gpu_repo = """
+        [Centos-CUDA]
+        name=CentOS CUDA
+        baseurl=http://{ip}:8081/repository/centos-cuda/rhel7/$basearch/
+        enabled=1
+        gpgcheck=0
+        
+        [Centos-libnvidia-containe]
+        name=CentOS libnvidia-containe
+        baseurl=http://{ip}:8081/repository/libnvidia-container/centos7/$basearch/
+        enabled=1
+        gpgcheck=0
+        
+        [Centos-nvidia-container-runtime]
+        name=nvidia-container-runtime
+        baseurl=http://{ip}:8081/repository/nvidia-container-runtime/centos7/$basearch
+        gpgcheck=0
+        enabled=1
+        
+        [Centos-nvidia-docker]
+        name=nvidia-docker
+        baseurl=http://{ip}:8081/repository/nvidia-docker/centos7/$basearch
+        gpgcheck=0
+        """
+        g_repo.write(gpu_repo.format(ip=ip))
+        g_repo.close()
 
 def separate(n, t):
     print("********************",n,t,"********************")
 
 # 下载
 def download(kube_version):
-        separate('K8S image pull |',common.get('architectures'))
-        for name, value in images.k8s_images.items():
-            url = value
-            k = dict()
-            k.update(version.version_mg(kube_version))
-            k.update(common)
-            url = url.format(**k)
-            cmd_pull = 'docker pull '+url
-            cmd_remove = 'docker rmi -f '+url
-            system(cmd_pull)
-            system(cmd_remove)
-        print('\n')
+    separate('K8S image pull |',common.get('architectures'))
+    for name, value in images.k8s_images.items():
+        url = value
+        k = dict()
+        k.update(version.version_mg(kube_version))
+        k.update(common)
+        url = url.format(**k)
+        cmd_pull = 'docker pull '+url
+        cmd_remove = 'docker rmi -f '+url
+        system(cmd_pull)
+        system(cmd_remove)
+    print('\n')
 
-        separate('App image pull |',common.get('architectures'))
-        for image in images.app_images:
-            k = dict()
-            k.update(common)
-            k.update(version.version_mg(kube_version))
-            img = image.format(**k)
-            cmd_pull = 'docker pull '+img
-            cmd_remove = 'docker rmi -f '+img
-            system(cmd_pull)
-            system(cmd_remove)
-        print('\n')
+    separate('App image pull |',common.get('architectures'))
+    for image in images.app_images:
+        k = dict()
+        k.update(common)
+        k.update(version.version_mg(kube_version))
+        img = image.format(**k)
+        cmd_pull = 'docker pull '+img
+        cmd_remove = 'docker rmi -f '+img
+        system(cmd_pull)
+        system(cmd_remove)
+    print('\n')
 
-        separate('Raw downalod |',common.get('architectures'))
-        for name, value in raw.raw_url.items():
-            url = value
-            k = dict()
-            k.update(version.version_mg(kube_version))
-            k.update(common)
-            url = url.format(**k)
-            cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -P '+ raw_save_dirname
-            system(cmd)
+    separate('Raw downalod |',common.get('architectures'))
+    for name, value in raw.raw_url.items():
+        url = value
+        k = dict()
+        k.update(version.version_mg(kube_version))
+        k.update(common)
+        url = url.format(**k)
+        cmd = 'wget --timeout=600 --no-check-certificate ' + url + ' -P '+ raw_save_dirname
+        system(cmd)
 
-        print('\n')
+    print('\n')
 
-        separate('Rpm download |',common.get('architectures'))
-        for rpm in rpms.rpms_base:
+    separate('Rpm download |',common.get('architectures'))
+    for rpm in rpms.rpms_base:
+        cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
+        system(cmd)
+    print('\n')
+
+    if common.get('architectures')  == 'amd64':
+        separate('NVIDIA rpm download |', common.get('architectures'))
+        for rpm in rpms.rpms_gpu:
             cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
             system(cmd)
-        print('\n')
+    print('\n')
 
-        if common.get('architectures')  == 'amd64':
-            separate('NVIDIA rpm download |', common.get('architectures'))
-            for rpm in rpms.rpms_gpu:
-                cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
-                system(cmd)
-        print('\n')
-
-        separate('Download finished |',common.get('architectures'))
+    separate('Download finished |',common.get('architectures'))
 
 def run():
     create_yum_repo
