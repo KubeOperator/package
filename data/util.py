@@ -126,74 +126,68 @@ def create_yum_repo():
 def separate(v, n, t):
     print("********************",v,n,t,"********************",flush=True)
 
-# 下载
-def download(kube_version, *args):
-    separate(kube_version,'K8S image pull |',common.get('architectures'))
+
+def download(k8s_version):
+    separate(k8s_version,'K8S image pull |',common.get('architectures'))
     for name, value in images.k8s_images.items():
         url = value
         k = dict()
-        k.update(version.version_mg(kube_version))
+        k.update(version.version_mg(k8s_version))
         k.update(common)
         url = url.format(**k)
         cmd_pull = 'docker pull '+url
+        print('Command: ',cmd_pull)
         cmd_remove = 'docker rmi -f '+url
         system(cmd_pull)
         system(cmd_remove)
     print('\n')
 
-    separate(kube_version,'App image pull |',common.get('architectures'))
+    separate(k8s_version,'App image pull |',common.get('architectures'))
     for image in images.app_images:
         k = dict()
         k.update(common)
-        k.update(version.version_mg(kube_version))
+        k.update(version.version_mg(k8s_version))
         img = image.format(**k)
         cmd_pull = 'docker pull '+img
+        print('Command: ',cmd_pull)
         cmd_remove = 'docker rmi -f '+img
         system(cmd_pull)
         system(cmd_remove)
     print('\n')
 
-    separate(kube_version,'Raw downalod |',common.get('architectures'))
+    separate(k8s_version,'Raw downalod |',common.get('architectures'))
     for name, value in raw.raw_url.items():
         url = value
         k = dict()
-        k.update(version.version_mg(kube_version))
+        k.update(version.version_mg(k8s_version))
         k.update(common)
         url = url.format(**k)
         cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P '+ raw_save_dirname
+        print('Command: ',cmd)
         system(cmd)
     print('\n')
 
-    # 下载升级离线包
-    for v in args:
-        separate(v, 'Raw downalod |', common.get('architectures'))
-        for name, value in raw.raw_url.items():
-            url = value
-            k = dict()
-            k.update(version.version_mg(v))
-            k.update(common)
-            url = url.format(**k)
-            cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P ' + raw_save_dirname
-            system(cmd)
-        print('\n')
-
-    separate(kube_version,'Rpm download |',common.get('architectures'))
+    separate(k8s_version,'Rpm download |',common.get('architectures'))
     for rpm in rpms.rpms_base:
         cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
+        print('Command: ',cmd)
         system(cmd)
     print('\n')
 
-    if common.get(kube_version,'architectures')  == 'amd64':
+    if common.get(k8s_version,'architectures')  == 'amd64':
         separate('NVIDIA rpm download |', common.get('architectures'))
         for rpm in rpms.rpms_gpu:
             cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
+            print('Command: ', cmd)
             system(cmd)
     print('\n')
 
-    separate(kube_version,'Download finished |',common.get('architectures'))
+    separate(k8s_version,'Download finished |',common.get('architectures'))
 
 def run():
     create_yum_repo()
     kube_version = common.get('kube_version')
     kube_upgrade_version = common.get('kube_upgrade_version')
-    download(kube_version,kube_upgrade_version)
+    download(kube_version)
+    download(kube_upgrade_version)
+
