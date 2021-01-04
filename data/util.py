@@ -183,7 +183,7 @@ def download(kube_version, *args):
         system(cmd)
     print('\n')
 
-    if common.get('architectures')  == 'amd64':
+    if common.get(kube_version,'architectures')  == 'amd64':
         separate('NVIDIA rpm download |', common.get('architectures'))
         for rpm in rpms.rpms_gpu:
             cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
@@ -195,4 +195,5 @@ def download(kube_version, *args):
 def run():
     create_yum_repo()
     kube_version = common.get('kube_version')
-    download(kube_version)
+    kube_upgrade_version = common.get('kube_upgrade_version')
+    download(kube_version,kube_upgrade_version)
