@@ -122,7 +122,7 @@ def create_yum_repo():
             g_repo.close()
 
 def separate(n, t):
-    print("********************",n,t,"********************")
+    print("********************",n,t,"********************",flush=True)
 
 # 下载
 def download(kube_version):
