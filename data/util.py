@@ -120,6 +120,8 @@ def create_yum_repo():
         else:
             print("gpu.repo: 写入成功")
             g_repo.close()
+    cmd = 'yum clean all && yum makecache'
+    system(cmd)
 
 def separate(n, t):
     print("********************",n,t,"********************",flush=True)
