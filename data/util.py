@@ -123,12 +123,12 @@ def create_yum_repo():
     cmd = 'yum clean all && yum makecache'
     system(cmd)
 
-def separate(n, t):
-    print("********************",n,t,"********************",flush=True)
+def separate(v, n, t):
+    print("********************",v,n,t,"********************",flush=True)
 
 # 下载
-def download(kube_version):
-    separate('K8S image pull |',common.get('architectures'))
+def download(kube_version, *args):
+    separate(kube_version,'K8S image pull |',common.get('architectures'))
     for name, value in images.k8s_images.items():
         url = value
         k = dict()
@@ -141,7 +141,7 @@ def download(kube_version):
         system(cmd_remove)
     print('\n')
 
-    separate('App image pull |',common.get('architectures'))
+    separate(kube_version,'App image pull |',common.get('architectures'))
     for image in images.app_images:
         k = dict()
         k.update(common)
@@ -153,7 +153,7 @@ def download(kube_version):
         system(cmd_remove)
     print('\n')
 
-    separate('Raw downalod |',common.get('architectures'))
+    separate(kube_version,'Raw downalod |',common.get('architectures'))
     for name, value in raw.raw_url.items():
         url = value
         k = dict()
@@ -162,10 +162,22 @@ def download(kube_version):
         url = url.format(**k)
         cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P '+ raw_save_dirname
         system(cmd)
-
     print('\n')
 
-    separate('Rpm download |',common.get('architectures'))
+    # 下载升级离线包
+    for v in args:
+        separate(v, 'Raw downalod |', common.get('architectures'))
+        for name, value in raw.raw_url.items():
+            url = value
+            k = dict()
+            k.update(version.version_mg(v))
+            k.update(common)
+            url = url.format(**k)
+            cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P ' + raw_save_dirname
+            system(cmd)
+        print('\n')
+
+    separate(kube_version,'Rpm download |',common.get('architectures'))
     for rpm in rpms.rpms_base:
         cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
         system(cmd)
@@ -178,7 +190,7 @@ def download(kube_version):
             system(cmd)
     print('\n')
 
-    separate('Download finished |',common.get('architectures'))
+    separate(kube_version,'Download finished |',common.get('architectures'))
 
 def run():
     create_yum_repo()
