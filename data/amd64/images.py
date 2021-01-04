@@ -10,12 +10,12 @@ k8s_images = {
     # busybox_image image 地址
     'busybox_image': '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}-{architectures}',
     # calico 相关镜像
-    'calico_typha_image': '{local_hostname}:{registry_port}/calico/typha:{crictl_version}-{architectures}',
-    'calico_cni_image': '{local_hostname}:{registry_port}/calico/cni:{crictl_version}-{architectures}',
-    'calico_node_image': '{local_hostname}:{registry_port}/calico/node:{crictl_version}-{architectures}',
-    'calico_kube_controllers_image': '{local_hostname}:{registry_port}/calico/kube-controllers:{crictl_version}-{architectures}',
-    'calico_pod2daemon_flexvol_image': '{local_hostname}:{registry_port}/calico/pod2daemon-flexvol:{crictl_version}-{architectures}',
-    'calicoctl_image': '{local_hostname}:{registry_port}/calico/ctl:{crictl_version}-{architectures}',
+    'calico_typha_image': '{local_hostname}:{registry_port}/calico/typha:{calico_version}-{architectures}',
+    'calico_cni_image': '{local_hostname}:{registry_port}/calico/cni:{calico_version}-{architectures}',
+    'calico_node_image': '{local_hostname}:{registry_port}/calico/node:{calico_version}-{architectures}',
+    'calico_kube_controllers_image': '{local_hostname}:{registry_port}/calico/kube-controllers:{calico_version}-{architectures}',
+    'calico_pod2daemon_flexvol_image': '{local_hostname}:{registry_port}/calico/pod2daemon-flexvol:{calico_version}-{architectures}',
+    'calicoctl_image': '{local_hostname}:{registry_port}/calico/ctl:{calico_version}-{architectures}',
     # flannel image 地址
     'flannel_image': '{local_hostname}:{registry_port}/coreos/flannel:{flannel_version}-{architectures}',
     # ingress-controller 镜像地址
