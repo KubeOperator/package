@@ -7,8 +7,7 @@ raw_url = {
     'etcd_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/etcd/{etcd_version}/{architectures}/etcd-{etcd_version}-linux-{architectures}.tar.gz',
     'cni_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/containernetworking/{cni_version}/{architectures}/cni-plugins-linux-{architectures}-{cni_version}.tgz',
     'docker_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/docker/{docker_version}/{architectures}/docker-{docker_version}.tgz',
-    'containerd_download_url_old': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/containerd/1.3.6/{architectures}/containerd-1.3.6-linux-{architectures}.tar.gz',
-    'containerd_download_url_new': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/containerd/1.4.1/{architectures}/containerd-1.4.1-linux-{architectures}.tar.gz',
+    'containerd_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/containerd/{containerd_version}/{architectures}/containerd-{containerd_version}-linux-{architectures}.tar.gz',
     'crictl_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/crictl/{crictl_version}/{architectures}/crictl-{crictl_version}-linux-{architectures}.tar.gz',
     'runc_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/runc/{runc_version}/{architectures}/runc.{architectures}',
     # ----------------------- 离线镜像文件下载地址 ----------------------
