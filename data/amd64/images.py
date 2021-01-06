@@ -30,7 +30,9 @@ k8s_images = {
     # npd image 地址
     'npd_image': '{local_hostname}:{registry_port}/kubeoperator/node-problem-detector:{npd_versioon}-{architectures}',
     # kube-bench image
-    'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}-{architectures}'
+    'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}-{architectures}',
+     # helm2 tiller image
+    'helm_v2': '{local_hostname}:{registry_port}/kubeoperator/tiller:{helm_v2_version}'
 }
 
 app_images={
@@ -69,9 +71,6 @@ app_images={
     '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{csi_provisioner_image_version}',
     '{local_hostname}:{registry_port}/k8scsi/csi-snapshotter:{csi_snapshotter_image_version}',
     '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{csi_attacher_image_version}',
-    # helm2 tiller image
-    '{local_hostname}:{registry_port}/kubeoperator/tiller:v2.16.9',
-    '{local_hostname}:{registry_port}/kubeoperator/tiller:v2.17.0',
     # f5
     '{local_hostname}:{registry_port}/kubeoperator/k8s-bigip-ctlr:1.9.2-amd64',
     # oceanstor csi
