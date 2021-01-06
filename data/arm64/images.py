@@ -20,7 +20,7 @@ k8s_images = {
     'flannel_image': '{local_hostname}:{registry_port}/coreos/flannel:{flannel_version}-{architectures}',
     # ingress-controller 镜像地址
     'nginx_ingress_image': '{local_hostname}:{registry_port}/kubernetes-ingress-controller/nginx-ingress-controller:{nginx_ingress_version}',
-    'traefik_ingress_image': '{local_hostname}:{registry_port}/kubeoperator/traefik:{traefik_ingress_version}',
+    'traefik_ingress_image': '{local_hostname}:{registry_port}/traefik:{traefik_ingress_version}',
     # ceph-rbd provisioner
     'rbd_provisioner_image': '{local_hostname}:{registry_port}/external_storage/rbd-provisioner:{rbd_provisioner_version}',
     # nfs provisioner

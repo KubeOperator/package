@@ -32,7 +32,7 @@ k8s_images = {
     # kube-bench image
     'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}-{architectures}',
      # helm2 tiller image
-    'helm_v2': '{local_hostname}:{registry_port}/kubeoperator/tiller:{helm_v2_version}'
+    'helm_tiller_v2': '{local_hostname}:{registry_port}/kubeoperator/tiller:{helm_v2_version}'
 }
 
 app_images={
