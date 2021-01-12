@@ -54,7 +54,7 @@ common = {
     'kube_upgrade_version': sys.argv[2]
 }
 
-kubeops_repo = """
+kubeops_repo_amd64 = """
 [Centos-Base]
 name=CentOS Base
 baseurl=http://{ip}:8081/repository/centos-base/7/extras/$basearch/
@@ -64,6 +64,26 @@ gpgcheck=0
 [Centos-Extras]
 name=CentOS Extras
 baseurl=http://{ip}:8081/repository/centos-base/7/os/$basearch/
+enabled=1
+gpgcheck=0
+
+[Centos-epel]
+name=CentOS epel
+baseurl=http://{ip}:8081/repository/centos-epel/7/$basearch/
+enabled=1
+gpgcheck=0
+"""
+
+kubeops_repo_arm64 = """
+[Centos-Base]
+name=CentOS Base
+baseurl=http://{ip}:8081/repository/centos-altarch/7/extras/$basearch/
+enabled=1
+gpgcheck=0
+
+[Centos-Extras]
+name=CentOS Extras
+baseurl=http://{ip}:8081/repository/centos-altarch/7/os/$basearch/
 enabled=1
 gpgcheck=0
 
@@ -101,18 +121,21 @@ gpgcheck=0
 
 
 def create_yum_repo():
-    try:
-        k_repo = open("/etc/yum.repos.d/kubeops.repo","w")
-        ip = get_host_ip()
-        k_repo.write(kubeops_repo.format(ip=ip))
-    except IOError:
-        print("Error: 没有找到文件或读取文件失败")
-    else:
-        print("kubeops.repo: 写入成功")
-        k_repo.close()
+    if common.get('architectures') == "arm64":
+        try:
+            a_repo = open("/etc/yum.repos.d/kubeops.repo","w")
+            ip = get_host_ip()
+            a_repo.write(kubeops_repo_arm64.format(ip=ip))
+        except IOError:
+            print("Error: 没有找到文件或读取文件失败")
+        else:
+            print("kubeops.repo: 写入成功")
 
     if common.get('architectures') == "amd64":
         try:
+            ip = get_host_ip()
+            k_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
+            k_repo.write(kubeops_repo_amd64.format(ip=ip))
             g_repo = open("/etc/yum.repos.d/gpu.repo", "w")
             g_repo.write(gpu_repo.format(ip=ip))
         except IOError:
@@ -120,6 +143,7 @@ def create_yum_repo():
         else:
             print("gpu.repo: 写入成功")
             g_repo.close()
+            k_repo.close()
     cmd = 'yum clean all && yum makecache'
     system(cmd)
 
