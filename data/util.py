@@ -144,7 +144,7 @@ def create_yum_repo():
             print("gpu.repo: 写入成功")
             g_repo.close()
             k_repo.close()
-    cmd = 'yum clean all && yum makecache'
+    cmd = 'yum clean all && rm -rf /var/cache/yum/* && yum makecache'
     system(cmd)
 
 def separate(v, n, t):
