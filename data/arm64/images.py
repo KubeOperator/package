@@ -33,7 +33,7 @@ k8s_images = {
     'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}-{architectures}'
 }
 
-app_images = {
+app_images = [{
     # registry
     '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1-arm64',
     # dashboard
@@ -53,4 +53,19 @@ app_images = {
     '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0-arm64',
     # grafana
     '{local_hostname}:{registry_port}/kubeoperator/grafana:7.3.3-arm64'
+},
+    {
+    # loki version: 2.0.0 , appVersion: v2.0.0
+    '{local_hostname}:{registry_port}/grafana/promtail:2.1.0',
+    '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
+    '{local_hostname}:{registry_port}/ats/bats:v1.1.0',
+    # promethus version: 11.5.0 , appVersion: 2.18.1
+    '{local_hostname}:{registry_port}/prom/node-exporter:v1.0.1',
+    '{local_hostname}:{registry_port}/coreos/kube-state-metrics:v1.9.5',
+    '{local_hostname}:{registry_port}/prom/alertmanager:v0.20.0',
+    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.3.0',
+    '{local_hostname}:{registry_port}/prom/pushgateway:v1.0.1',
+    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.4.0',
+    '{local_hostname}:{registry_port}/prom/prometheus:v2.20.1'
 }
+]

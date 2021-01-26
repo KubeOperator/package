@@ -167,17 +167,19 @@ def download(k8s_version):
     print('\n')
 
     separate(k8s_version,'App image pull |',common.get('architectures'))
-    for image in images.app_images:
+    for i in range(len(images.app_images)):
         k = dict()
         k.update(common)
         k.update(version.version_mg(k8s_version))
-        img = image.format(**k)
-        cmd_pull = 'docker pull '+img
-        print('Command: ',cmd_pull)
-        cmd_remove = 'docker rmi -f '+img
-        system(cmd_pull)
-        system(cmd_remove)
-    print('\n')
+        m = images.app_images[i]
+        for image in m:
+            img = image.format(**k)
+            cmd_pull = 'docker pull '+img
+            print('Command: ',cmd_pull)
+            cmd_remove = 'docker rmi -f '+img
+            system(cmd_pull)
+            system(cmd_remove)
+            print('\n')
 
     separate(k8s_version,'Raw downalod |',common.get('architectures'))
     for name, value in raw.raw_url.items():
