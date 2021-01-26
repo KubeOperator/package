@@ -52,7 +52,8 @@ app_images = [{
     # chartmuseum
     '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0-arm64',
     # grafana
-    '{local_hostname}:{registry_port}/kubeoperator/grafana:7.3.3-arm64'
+    '{local_hostname}:{registry_port}/kubeoperator/grafana:7.3.3-arm64',
+    '{local_hostname}:{registry_port}/curlimages/curl:7.73.0'
 },
     {
     # loki version: 2.0.0 , appVersion: v2.0.0
