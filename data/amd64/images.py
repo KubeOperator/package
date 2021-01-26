@@ -104,7 +104,6 @@ app_images = [{
         # loki version: 2.0.0 , appVersion: v2.0.0
         '{local_hostname}:{registry_port}/grafana/promtail:2.1.0',
         '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
-        '{local_hostname}:{registry_port}/ats/bats:v1.1.0',
         # promethus version: 11.5.0 , appVersion: 2.18.1
         '{local_hostname}:{registry_port}/prom/node-exporter:v1.0.1',
         '{local_hostname}:{registry_port}/coreos/kube-state-metrics:v1.9.5',
