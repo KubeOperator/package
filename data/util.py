@@ -152,6 +152,12 @@ def separate(v, n, t):
 
 
 def download(k8s_version):
+    try:
+        clear_image = "docker system prune --all --volumes -f"
+        system(clear_image)
+    except SystemError:
+        print("Error: 镜像清理失败")
+
     separate(k8s_version,'K8S image pull |',common.get('architectures'))
     for name, value in images.k8s_images.items():
         url = value
