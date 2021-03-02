@@ -187,6 +187,20 @@ def download(k8s_version):
             system(cmd_remove)
             print('\n')
 
+    separate(k8s_version,'Storage image pull |',common.get('architectures'))
+    for name, value in images.storage_images.items():
+        url = value
+        k = dict()
+        k.update(version.version_mg(k8s_version))
+        k.update(common)
+        url = url.format(**k)
+        cmd_pull = 'docker pull '+url
+        print('Command: ',cmd_pull)
+        cmd_remove = 'docker rmi -f '+url
+        system(cmd_pull)
+        system(cmd_remove)
+    print('\n')
+
     separate(k8s_version,'Raw downalod |',common.get('architectures'))
     for name, value in raw.raw_url.items():
         url = value

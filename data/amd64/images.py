@@ -6,33 +6,31 @@ k8s_images = {
     'coredns_image_name': '{local_hostname}:{registry_port}/coredns/coredns:{coredns_version}',
     # pod_infra_container_image: 'k8s.gcr.io/pause:{pause_version}'
     # 基础容器 image 地址
-    'sandbox_image': '{local_hostname}:{registry_port}/kubeoperator/pause:{pause_version}-{architectures}',
+    'sandbox_image': '{local_hostname}:{registry_port}/kubeoperator/pause:{pause_version}',
     # busybox_image image 地址
-    'busybox_image': '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}-{architectures}',
+    'busybox_image': '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}',
     # calico 相关镜像
-    'calico_typha_image': '{local_hostname}:{registry_port}/calico/typha:{calico_version}-{architectures}',
-    'calico_cni_image': '{local_hostname}:{registry_port}/calico/cni:{calico_version}-{architectures}',
-    'calico_node_image': '{local_hostname}:{registry_port}/calico/node:{calico_version}-{architectures}',
-    'calico_kube_controllers_image': '{local_hostname}:{registry_port}/calico/kube-controllers:{calico_version}-{architectures}',
-    'calico_pod2daemon_flexvol_image': '{local_hostname}:{registry_port}/calico/pod2daemon-flexvol:{calico_version}-{architectures}',
-    'calicoctl_image': '{local_hostname}:{registry_port}/calico/ctl:{calico_version}-{architectures}',
+    'calico_typha_image': '{local_hostname}:{registry_port}/calico/typha:{calico_version}',
+    'calico_cni_image': '{local_hostname}:{registry_port}/calico/cni:{calico_version}',
+    'calico_node_image': '{local_hostname}:{registry_port}/calico/node:{calico_version}',
+    'calico_kube_controllers_image': '{local_hostname}:{registry_port}/calico/kube-controllers:{calico_version}',
+    'calico_pod2daemon_flexvol_image': '{local_hostname}:{registry_port}/calico/pod2daemon-flexvol:{calico_version}',
+    'calicoctl_image': '{local_hostname}:{registry_port}/calico/ctl:{calico_version}',
     # flannel image 地址
-    'flannel_image': '{local_hostname}:{registry_port}/coreos/flannel:{flannel_version}-{architectures}',
+    'flannel_image': '{local_hostname}:{registry_port}/coreos/flannel:{flannel_version}',
     # ingress-controller 镜像地址
     'nginx_ingress_image': '{local_hostname}:{registry_port}/kubernetes-ingress-controller/nginx-ingress-controller:{nginx_ingress_version}',
     'traefik_ingress_image': '{local_hostname}:{registry_port}/traefik:{traefik_ingress_version}',
-    # ceph-rbd provisioner
-    'rbd_provisioner_image': '{local_hostname}:{registry_port}/external_storage/rbd-provisioner:{rbd_provisioner_version}',
-    # nfs provisioner
-    'nfs_client_provisioner_image': '{local_hostname}:{registry_port}/kubeoperator/nfs-client-provisioner:{nfs_provisioner_version}-{architectures}',
     # metrics-server image
-    'metrics_server_image': '{local_hostname}:{registry_port}/kubeoperator/metrics-server:{metrics_server_version}-{architectures}',
+    'metrics_server_image': '{local_hostname}:{registry_port}/kubeoperator/metrics-server:{metrics_server_version}',
     # npd image 地址
-    'npd_image': '{local_hostname}:{registry_port}/kubeoperator/node-problem-detector:{npd_versioon}-{architectures}',
+    'npd_image': '{local_hostname}:{registry_port}/kubeoperator/node-problem-detector:{npd_version}',
     # kube-bench image
-    'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}-{architectures}',
+    'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}',
     # helm2 tiller image
-    'helm_tiller_image': '{local_hostname}:{registry_port}/kubeoperator/tiller:{helm_v2_version}'
+    'helm_tiller_image': '{local_hostname}:{registry_port}/kubeoperator/tiller:{helm_v2_version}',
+    # nvidia gpu
+    'nvidia_k8s_device_plugin': '{local_hostname}:{registry_port}/nvidia/k8s-device-plugin:1.0.0-beta'
 }
 
 app_images = [{
@@ -49,7 +47,7 @@ app_images = [{
     # chartmuseum version: 2.13.0, appVersion: 0.12.0
     '{local_hostname}:{registry_port}/chartmuseum/chartmuseum:v0.12.0',
     # registry version: 1.9.3, appVersion: 2.7.1
-    '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1-amd64',
+    '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1',
     # efk version: 1.0.0,appVersion: 7.6.2
     '{local_hostname}:{registry_port}/fluentd_elasticsearch/fluentd:v2.8.0',
     '{local_hostname}:{registry_port}/elasticsearch/elasticsearch:7.6.2',
@@ -63,30 +61,16 @@ app_images = [{
     '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.3.0',
     '{local_hostname}:{registry_port}/prom/pushgateway:v1.0.1',
     '{local_hostname}:{registry_port}/prom/prometheus:v2.18.1',
-    # rook-ceph
-    '{local_hostname}:{registry_port}/ceph/ceph:{ceph_image_version}',
-    '{local_hostname}:{registry_port}/cephcsi/cephcsi:{csi_ceph_image_version}',
-    '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{csi_registrar_image_version}',
-    '{local_hostname}:{registry_port}/k8scsi/csi-resizer:{csi_resizer_image_version}',
-    '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{csi_provisioner_image_version}',
-    '{local_hostname}:{registry_port}/k8scsi/csi-snapshotter:{csi_snapshotter_image_version}',
-    '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{csi_attacher_image_version}',
     # f5
     '{local_hostname}:{registry_port}/kubeoperator/k8s-bigip-ctlr:1.9.2-amd64',
-    # oceanstor csi
-    '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:v1.4.0',
-    '{local_hostname}:{registry_port}/k8scsi/csi-attacher:v1.2.1',
-    '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:v1.2.0',
-    '{local_hostname}:{registry_port}/kubeoperator/huawei-csi:2.2.9',
-    '{local_hostname}:{registry_port}/nvidia/k8s-device-plugin:1.0.0-beta',
     # loki
-    '{local_hostname}:{registry_port}/grafana/loki:2.0.0-amd64',
-    '{local_hostname}:{registry_port}/grafana/promtail:2.0.0-amd64',
+    '{local_hostname}:{registry_port}/grafana/loki:2.0.0',
+    '{local_hostname}:{registry_port}/grafana/promtail:2.0.0',
     # istio
     '{local_hostname}:{registry_port}/istio/pilot:{istio_version}',
     '{local_hostname}:{registry_port}/istio/proxyv2:{istio_version}',
     # grafana
-    '{local_hostname}:{registry_port}/kubeoperator/grafana:7.3.3-amd64',
+    '{local_hostname}:{registry_port}/kubeoperator/grafana:7.3.3',
     '{local_hostname}:{registry_port}/curlimages/curl:7.73.0'
 },
     {
@@ -114,3 +98,31 @@ app_images = [{
         '{local_hostname}:{registry_port}/prom/prometheus:v2.20.1'
     }
 ]
+
+storage_images = {
+    # ceph-rbd provisioner
+    'rbd_provisioner_image': '{local_hostname}:{registry_port}/external_storage/rbd-provisioner:{rbd_provisioner_version}',
+    # nfs provisioner
+    'nfs_client_provisioner_image': '{local_hostname}:{registry_port}/kubeoperator/nfs-client-provisioner:{nfs_provisioner_version}-{architectures}',
+    # rook ceph
+    'ceph_image': '{{ local_hostname }}:{{ registry_port }}/ceph/ceph:{{ ceph_version }}',
+    'rook_ceph_image': '{{ local_hostname }}:{{ registry_port }}/rook/ceph:{{ rook_ceph_version }}',
+    'rook_csi_ceph_image': '{{ local_hostname }}:{{ registry_port }}/cephcsi/cephcsi:{{ rook_csi_ceph_version }}',
+    'rook_csi_registrar_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-node-driver-registrar:{{ rook_csi_node_driver_registrar_version }}',
+    'rook_csi_resizer_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-resizer:{{ rook_csi_resizer_version }}',
+    'rook_csi_provisioner_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-provisioner:{{ rook_csi_provisioner_version }}',
+    'rook_csi_snapshotter_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-snapshotter:{{ rook_csi_snapshotter_version }}',
+    'rook_csi_attacher_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-attacher:{{ rook_csi_attacher_version }}',
+    # oceanstor csi
+    'huawei_csi_driver_image': '{{ local_hostname }}:{{ registry_port }}/kubeoperator/huawei-csi:{{ huawei_csi_driver_version }}',
+    'huawei_csi_provisioner_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-provisioner:{{ huawei_csi_provisioner_version }}',
+    'huawei_csi_attacher_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-attacher:{{ huawei_csi_attacher_version }}',
+    'huawei_csi_node_driver_registrar_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-node-driver-registrar:{{ huawei_csi_node_driver_registrar_version }}',
+    # vsphere csi
+    'vsphere_csi_driver_image': '{{ dns_repository_hostname }}:{{ registry_port }}/kubeoperator/vsphere-csi-driver:{{ vsphere_csi_version }}',
+    'vsphere_csi_syncer_image': '{{ dns_repository_hostname }}:{{ registry_port }}/kubeoperator/vsphere-csi-syncer:{{ vsphere_csi_version }}',
+    'vsphere_csi_livenessprobe_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/livenessprobe:{{ vsphere_csi_livenessprobe_version }}',
+    'vsphere_csi_provisioner_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/csi-provisioner:{{ vsphere_csi_provisioner_version }}',
+    'vsphere_csi_attacher_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/csi-attacher:{{ vsphere_csi_attacher_version }}',
+    'vsphere_csi_node_driver_registrar_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/csi-node-driver-registrar:{{ vsphere_csi_node_driver_registrar_version }}'
+}
