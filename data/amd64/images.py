@@ -45,7 +45,7 @@ app_images = [{
     '{local_hostname}:{registry_port}/bitnami/kubectl:1.16.3-debian-10-r85',
     '{local_hostname}:{registry_port}/bitnami/kubeapps-kubeops:1.10.2-scratch-r0',
     # chartmuseum version: 2.13.0, appVersion: 0.12.0
-    '{local_hostname}:{registry_port}/chartmuseum/chartmuseum:v0.12.0',
+    '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0',
     # registry version: 1.9.3, appVersion: 2.7.1
     '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1',
     # efk version: 1.0.0,appVersion: 7.6.2
@@ -103,26 +103,26 @@ storage_images = {
     # ceph-rbd provisioner
     'rbd_provisioner_image': '{local_hostname}:{registry_port}/external_storage/rbd-provisioner:{rbd_provisioner_version}',
     # nfs provisioner
-    'nfs_client_provisioner_image': '{local_hostname}:{registry_port}/kubeoperator/nfs-client-provisioner:{nfs_provisioner_version}-{architectures}',
+    'nfs_client_provisioner_image': '{local_hostname}:{registry_port}/kubeoperator/nfs-client-provisioner:{nfs_provisioner_version}',
     # rook ceph
-    'ceph_image': '{{ local_hostname }}:{{ registry_port }}/ceph/ceph:{{ ceph_version }}',
-    'rook_ceph_image': '{{ local_hostname }}:{{ registry_port }}/rook/ceph:{{ rook_ceph_version }}',
-    'rook_csi_ceph_image': '{{ local_hostname }}:{{ registry_port }}/cephcsi/cephcsi:{{ rook_csi_ceph_version }}',
-    'rook_csi_registrar_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-node-driver-registrar:{{ rook_csi_node_driver_registrar_version }}',
-    'rook_csi_resizer_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-resizer:{{ rook_csi_resizer_version }}',
-    'rook_csi_provisioner_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-provisioner:{{ rook_csi_provisioner_version }}',
-    'rook_csi_snapshotter_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-snapshotter:{{ rook_csi_snapshotter_version }}',
-    'rook_csi_attacher_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-attacher:{{ rook_csi_attacher_version }}',
+    'ceph_image': '{local_hostname}:{registry_port}/ceph/ceph:{ceph_version}',
+    'rook_ceph_image': '{local_hostname}:{registry_port}/rook/ceph:{rook_ceph_version}',
+    'rook_csi_ceph_image': '{local_hostname}:{registry_port}/cephcsi/cephcsi:{rook_csi_ceph_version}',
+    'rook_csi_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{rook_csi_node_driver_registrar_version}',
+    'rook_csi_resizer_image': '{local_hostname}:{registry_port}/k8scsi/csi-resizer:{rook_csi_resizer_version}',
+    'rook_csi_provisioner_image': '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{rook_csi_provisioner_version}',
+    'rook_csi_snapshotter_image': '{local_hostname}:{registry_port}/k8scsi/csi-snapshotter:{rook_csi_snapshotter_version}',
+    'rook_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{rook_csi_attacher_version}',
     # oceanstor csi
-    'huawei_csi_driver_image': '{{ local_hostname }}:{{ registry_port }}/kubeoperator/huawei-csi:{{ huawei_csi_driver_version }}',
-    'huawei_csi_provisioner_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-provisioner:{{ huawei_csi_provisioner_version }}',
-    'huawei_csi_attacher_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-attacher:{{ huawei_csi_attacher_version }}',
-    'huawei_csi_node_driver_registrar_image': '{{ local_hostname }}:{{ registry_port }}/k8scsi/csi-node-driver-registrar:{{ huawei_csi_node_driver_registrar_version }}',
+    'huawei_csi_driver_image': '{local_hostname}:{registry_port}/kubeoperator/huawei-csi:{huawei_csi_driver_version}',
+    'huawei_csi_provisioner_image': '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{huawei_csi_provisioner_version}',
+    'huawei_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{huawei_csi_attacher_version}',
+    'huawei_csi_node_driver_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{huawei_csi_node_driver_registrar_version}',
     # vsphere csi
-    'vsphere_csi_driver_image': '{{ dns_repository_hostname }}:{{ registry_port }}/kubeoperator/vsphere-csi-driver:{{ vsphere_csi_version }}',
-    'vsphere_csi_syncer_image': '{{ dns_repository_hostname }}:{{ registry_port }}/kubeoperator/vsphere-csi-syncer:{{ vsphere_csi_version }}',
-    'vsphere_csi_livenessprobe_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/livenessprobe:{{ vsphere_csi_livenessprobe_version }}',
-    'vsphere_csi_provisioner_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/csi-provisioner:{{ vsphere_csi_provisioner_version }}',
-    'vsphere_csi_attacher_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/csi-attacher:{{ vsphere_csi_attacher_version }}',
-    'vsphere_csi_node_driver_registrar_image': '{{ dns_repository_hostname }}:{{ registry_port }}/k8scsi/csi-node-driver-registrar:{{ vsphere_csi_node_driver_registrar_version }}'
+    'vsphere_csi_driver_image': '{local_hostname}:{registry_port}/kubeoperator/vsphere-csi-driver:{vsphere_csi_version}',
+    'vsphere_csi_syncer_image': '{local_hostname}:{registry_port}/kubeoperator/vsphere-csi-syncer:{vsphere_csi_version}',
+    'vsphere_csi_livenessprobe_image': '{local_hostname}:{registry_port}/k8scsi/livenessprobe:{vsphere_csi_livenessprobe_version}',
+    'vsphere_csi_provisioner_image': '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{vsphere_csi_provisioner_version}',
+    'vsphere_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{vsphere_csi_attacher_version}',
+    'vsphere_csi_node_driver_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{vsphere_csi_node_driver_registrar_version}'
 }

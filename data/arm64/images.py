@@ -46,7 +46,7 @@ app_images = [{
     '{local_hostname}:{registry_port}/grafana/loki:2.0.0',
     '{local_hostname}:{registry_port}/grafana/promtail:2.0.0',
     # chartmuseum
-    '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0-arm64',
+    '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0',
     # grafana
     '{local_hostname}:{registry_port}/kubeoperator/grafana:7.3.3',
     '{local_hostname}:{registry_port}/curlimages/curl:7.73.0'
@@ -68,5 +68,5 @@ app_images = [{
 
 storage_images = {
     # nfs provisioner
-    'nfs_client_provisioner_image': '{local_hostname}:{registry_port}/kubeoperator/nfs-client-provisioner:{nfs_provisioner_version}-{architectures}'
+    'nfs_client_provisioner_image': '{local_hostname}:{registry_port}/kubeoperator/nfs-client-provisioner:{nfs_provisioner_version}'
 }
