@@ -57,7 +57,7 @@ app_images = [{
         '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
         # promethus version: 11.5.0 , appVersion: 2.18.1
         '{local_hostname}:{registry_port}/prom/node-exporter:v1.0.1',
-        '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.6',
+        '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.5',
         '{local_hostname}:{registry_port}/prom/alertmanager:v0.20.0',
         '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.3.0',
         '{local_hostname}:{registry_port}/prom/pushgateway:v1.0.1',
