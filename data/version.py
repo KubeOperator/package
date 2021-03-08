@@ -23,6 +23,7 @@ v1_18_4 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
@@ -81,6 +82,7 @@ v1_18_6 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
@@ -139,6 +141,7 @@ v1_18_8 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
@@ -197,6 +200,7 @@ v1_18_10 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
@@ -255,6 +259,7 @@ v1_18_12 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
@@ -313,6 +318,7 @@ v1_18_14 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
@@ -371,6 +377,7 @@ v1_18_15 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
@@ -429,6 +436,7 @@ v1_20_4 =  {
     'kube_bench_version': 'v0.0.1',
     'runc_version': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
