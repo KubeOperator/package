@@ -32,6 +32,7 @@ v1_18_4 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -48,6 +49,13 @@ v1_18_4 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.9',
     # docker版本
@@ -91,6 +99,7 @@ v1_18_6 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -107,6 +116,13 @@ v1_18_6 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.9',
     # docker版本
@@ -150,6 +166,7 @@ v1_18_8 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -166,6 +183,13 @@ v1_18_8 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.9',
     # docker版本
@@ -209,6 +233,7 @@ v1_18_10 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -225,6 +250,13 @@ v1_18_10 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.9',
     # docker版本
@@ -268,6 +300,7 @@ v1_18_12 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -284,6 +317,13 @@ v1_18_12 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.9',
     # docker版本
@@ -327,6 +367,7 @@ v1_18_14 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -343,6 +384,13 @@ v1_18_14 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.14',
     # docker版本
@@ -386,6 +434,7 @@ v1_18_15 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -402,6 +451,13 @@ v1_18_15 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.14',
     # docker版本
@@ -445,6 +501,7 @@ v1_20_4 =  {
     'rook_ceph_version': 'v1.3.6',
     'ceph_version': 'v14.2.9',
     'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
     # rook csi
     'rook_csi_ceph_version': 'v2.1.2',
     'rook_csi_resizer_version': 'v0.4.0',
@@ -461,6 +518,13 @@ v1_20_4 =  {
     'vsphere_csi_attacher_version': 'v1.2.1',
     'vsphere_csi_provisioner_version': 'v1.4.0',
     'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
     # etcd版本
     'etcd_version':'v3.4.14',
     # docker版本

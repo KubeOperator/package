@@ -96,7 +96,7 @@ app_images = [{
         '{local_hostname}:{registry_port}/prom/pushgateway:v1.0.1',
         '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.4.0',
         '{local_hostname}:{registry_port}/prom/prometheus:v2.20.1'
-    }
+   }
 ]
 
 storage_images = {
@@ -124,5 +124,13 @@ storage_images = {
     'vsphere_csi_livenessprobe_image': '{local_hostname}:{registry_port}/k8scsi/livenessprobe:{vsphere_csi_livenessprobe_version}',
     'vsphere_csi_provisioner_image': '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{vsphere_csi_provisioner_version}',
     'vsphere_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{vsphere_csi_attacher_version}',
-    'vsphere_csi_node_driver_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{vsphere_csi_node_driver_registrar_version}'
+    'vsphere_csi_node_driver_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{vsphere_csi_node_driver_registrar_version}',
+    # cinder csi
+    'cinder_csi_driver_image': '{local_hostname}:{registry_port}/k8scloudprovider/cinder-csi-plugin:{cinder_csi_version}',
+    'cinder_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{cinder_csi_attacher_version}',
+    'cinder_csi_provisioner_image': '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{cinder_csi_provisioner_version}',
+    'cinder_csi_snapshotter_image': '{local_hostname}:{registry_port}/k8scsi/csi-snapshotter:{cinder_csi_snapshotter_version}',
+    'cinder_csi_resizer_image': '{local_hostname}:{registry_port}/k8scsi/csi-resizer:{cinder_csi_resizer_version}',
+    'cinder_csi_livenessprobe_image': '{local_hostname}:{registry_port}/k8scsi/livenessprobe:{cinder_csi_livenessprobe_version}',
+    'cinder_csi_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{cinder_csi_node_driver_registrar_version}'
 }
