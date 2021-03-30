@@ -19,9 +19,9 @@ k8s_images = {
     'metrics_server_image': '{local_hostname}:{registry_port}/kubeoperator/metrics-server:{metrics_server_version}-{architectures}'
 }
 
-app_images = [{
+app_images = {
     # chartmuseum version: 2.13.0, appVersion: 0.12.0
-    '{local_hostname}:{registry_port}/chartmuseum/chartmuseum:v0.12.0',
+    'chartmuseum_image': '{local_hostname}:{registry_port}/chartmuseum/chartmuseum:v0.12.0',
     # registry version: 1.9.3, appVersion: 2.7.1
-    '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1-amd64'
-}]
+    'docker_registry_image': '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1-amd64'
+}
