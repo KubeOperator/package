@@ -51,7 +51,6 @@ common = {
     'registry_port': '8082',
     'architectures': get_host_arch(),
     'kube_version': sys.argv[1],
-    'kube_upgrade_version': sys.argv[2]
 }
 
 kubeops_repo_amd64 = """
@@ -207,6 +206,10 @@ def download(k8s_version):
         k = dict()
         k.update(version.version_mg(k8s_version))
         k.update(common)
+        v = {
+            'k8s_version': k8s_version
+        }
+        k.update(v)
         url = url.format(**k)
         cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P '+ raw_save_dirname
         print('Command: ',cmd)
@@ -232,8 +235,6 @@ def download(k8s_version):
 
 def run():
     create_yum_repo()
-    kube_version = common.get('kube_version')
-    kube_upgrade_version = common.get('kube_upgrade_version')
-    download(kube_version)
-    download(kube_upgrade_version)
-
+    kube_version = common.get('kube_version').split(",")
+    for i in kube_version:
+     download(i)
