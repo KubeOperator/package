@@ -4,7 +4,8 @@
 k8s_images = {
     # Pod image 地址
     'coredns_image_name': '{local_hostname}:{registry_port}/coredns/coredns:{coredns_version}',
-    # pod_infra_container_image: 'k8s.gcr.io/pause:{pause_version}'
+    # dns cache image 地址
+    'dns_cache_image': '{local_hostname}:{registry_port}/kubeoperator/k8s-dns-node-cache:{dns_cache_version}',
     # 基础容器 image 地址
     'sandbox_image': '{local_hostname}:{registry_port}/kubeoperator/pause:{pause_version}',
     # busybox_image image 地址
@@ -18,6 +19,9 @@ k8s_images = {
     'calicoctl_image': '{local_hostname}:{registry_port}/calico/ctl:{calico_version}',
     # flannel image 地址
     'flannel_image': '{local_hostname}:{registry_port}/coreos/flannel:{flannel_version}',
+    # cilium image 地址
+    'cilium_image': '{local_hostname}:{registry_port}/cilium/cilium:{cilium_version}',
+    'cilium_operator_image': '{local_hostname}:{registry_port}/cilium/operator-generic:{cilium_version}',
     # ingress-controller 镜像地址
     'nginx_ingress_image': '{local_hostname}:{registry_port}/kubernetes-ingress-controller/nginx-ingress-controller:{nginx_ingress_version}',
     'traefik_ingress_image': '{local_hostname}:{registry_port}/traefik:{traefik_ingress_version}',
