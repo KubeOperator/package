@@ -66,8 +66,12 @@ v1_18_4 =  {
     'flannel_version':'v0.12.0',
     # calico版本
     'calico_version':'v3.14.1',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.6.7',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.16.9',
     # helm v3 版本
@@ -133,8 +137,12 @@ v1_18_6 =  {
     'flannel_version':'v0.12.0',
     # calico版本
     'calico_version':'v3.14.1',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.6.7',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.16.9',
     # helm v3 版本
@@ -200,8 +208,12 @@ v1_18_8 =  {
     'flannel_version':'v0.12.0',
     # calico版本
     'calico_version':'v3.14.1',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.6.7',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.16.9',
     # helm v3 版本
@@ -267,8 +279,12 @@ v1_18_10 =  {
     'flannel_version':'v0.12.0',
     # calico版本
     'calico_version':'v3.14.1',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.6.7',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.16.9',
     # helm v3 版本
@@ -334,8 +350,12 @@ v1_18_12 =  {
     'flannel_version':'v0.13.0',
     # calico版本
     'calico_version':'v3.16.5',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.8.0',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.17.0',
     # helm v3 版本
@@ -401,8 +421,12 @@ v1_18_14 =  {
     'flannel_version':'v0.13.0',
     # calico版本
     'calico_version':'v3.16.5',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.8.0',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.17.0',
     # helm v3 版本
@@ -468,8 +492,12 @@ v1_18_15 =  {
     'flannel_version':'v0.13.0',
     # calico版本
     'calico_version':'v3.16.5',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.8.0',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.17.0',
     # helm v3 版本
@@ -535,8 +563,12 @@ v1_20_4 =  {
     'flannel_version':'v0.13.0',
     # calico版本
     'calico_version':'v3.16.5',
+    # cilium版本
+    'cilium_version':'v1.9.5',
     # coredns版本
     'coredns_version':'1.8.0',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
     # helm v2 版本
     'helm_v2_version':'v2.17.0',
     # helm v3 版本

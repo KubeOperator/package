@@ -81,7 +81,12 @@ rpms_base={
     'device-mapper-multipath',
     'lvm2',
     'kpartx',
-    'sshpass'
+    'sshpass',
+    'attr',
+    'glusterfs',
+    'glusterfs-libs',
+    'glusterfs-fuse',
+    'glusterfs-client-xlators'
 }
 
 
