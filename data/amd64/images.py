@@ -74,7 +74,7 @@ app_images = [{
     '{local_hostname}:{registry_port}/istio/pilot:{istio_version}',
     '{local_hostname}:{registry_port}/istio/proxyv2:{istio_version}',
     # grafana
-    '{local_hostname}:{registry_port}/kubeoperator/grafana:7.3.3',
+    '{local_hostname}:{registry_port}/grafana/grafana:7.3.3',
     '{local_hostname}:{registry_port}/curlimages/curl:7.73.0'
 },
     {
