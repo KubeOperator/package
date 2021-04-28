@@ -16,7 +16,7 @@ v1_18_15 =  {
     # etcd 版本
     'etcd_version':'v3.4.14',
     # docker版本
-    'docker_version':'19.03.9',
+    'docker_version':'19.03.15',
     # calico版本
     'calico_version':'v3.16.5',
     # coredns版本
