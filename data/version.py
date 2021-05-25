@@ -355,7 +355,7 @@ v1_18_12 =  {
     # cilium版本
     'cilium_version':'v1.9.5',
     # coredns版本
-    'coredns_version':'1.8.0',
+    'coredns_version':'1.6.7',
     # dns-cache版本
     'dns_cache_version':'1.17.0',
     # helm v2 版本
@@ -426,7 +426,7 @@ v1_18_14 =  {
     # cilium版本
     'cilium_version':'v1.9.5',
     # coredns版本
-    'coredns_version':'1.8.0',
+    'coredns_version':'1.6.7',
     # dns-cache版本
     'dns_cache_version':'1.17.0',
     # helm v2 版本
@@ -497,7 +497,7 @@ v1_18_15 =  {
     # cilium版本
     'cilium_version':'v1.9.5',
     # coredns版本
-    'coredns_version':'1.8.0',
+    'coredns_version':'1.6.7',
     # dns-cache版本
     'dns_cache_version':'1.17.0',
     # helm v2 版本
@@ -568,7 +568,7 @@ v1_18_18 =  {
     # cilium版本
     'cilium_version':'v1.9.5',
     # coredns版本
-    'coredns_version':'1.8.0',
+    'coredns_version':'1.6.7',
     # dns-cache版本
     'dns_cache_version':'1.17.0',
     # helm v2 版本
@@ -639,7 +639,7 @@ v1_20_4 =  {
     # cilium版本
     'cilium_version':'v1.9.5',
     # coredns版本
-    'coredns_version':'1.8.0',
+    'coredns_version':'1.7.0',
     # dns-cache版本
     'dns_cache_version':'1.17.0',
     # helm v2 版本
@@ -710,7 +710,7 @@ v1_20_6 =  {
     # cilium版本
     'cilium_version':'v1.9.5',
     # coredns版本
-    'coredns_version':'1.8.0',
+    'coredns_version':'1.7.0',
     # dns-cache版本
     'dns_cache_version':'1.17.0',
     # helm v2 版本
