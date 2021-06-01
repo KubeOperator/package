@@ -706,7 +706,7 @@ v1_20_6 =  {
     # flannel版本
     'flannel_version':'v0.13.0',
     # calico版本
-    'calico_version':'v3.16.5',
+    'calico_version':'v3.18.4',
     # cilium版本
     'cilium_version':'v1.9.5',
     # coredns版本
@@ -716,11 +716,11 @@ v1_20_6 =  {
     # helm v2 版本
     'helm_v2_version':'v2.17.0',
     # helm v3 版本
-    'helm_v3_version':'v3.4.1',
+    'helm_v3_version':'v3.5.4',
     # nginx-ingress版本
     'nginx_ingress_version':'0.33.0',
     # traefik-ingress版本
-    'traefik_ingress_version':'v2.2.1',
+    'traefik_ingress_version':'v2.4.8',
     # metrics-server版本
     'metrics_server_version':'v0.3.6',
     # istio版本
