@@ -55,9 +55,9 @@ app_images = [{
     # efk version: 1.0.0,appVersion: 7.6.2
     '{local_hostname}:{registry_port}/fluentd_elasticsearch/fluentd:v2.8.0',
     '{local_hostname}:{registry_port}/elasticsearch/elasticsearch:7.6.2',
-    # dashboard version: 2.2.0, appVersion: 2.0.3
-    '{local_hostname}:{registry_port}/kubernetesui/dashboard:v2.0.3',
-    '{local_hostname}:{registry_port}/kubernetesui/metrics-scraper:v1.0.4',
+    # kubernetesui dashboard
+    '{local_hostname}:{registry_port}/kubernetesui/dashboard:{kubernetesui_dashboard}',
+    '{local_hostname}:{registry_port}/kubernetesui/metrics-scraper:{kubernetesui_metrics_scraper}',
     # prometheus version: 11.5.0,appVersion: 2.18.1
     '{local_hostname}:{registry_port}/prom/node-exporter:v0.18.1',
     '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.5',
