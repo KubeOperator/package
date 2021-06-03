@@ -88,13 +88,3 @@ rpms_base={
     'glusterfs-fuse',
     'glusterfs-client-xlators'
 }
-
-
-rpms_gpu={
-    'dkms',
-    'pciutils',
-    'cuda-drivers',
-    'nvidia-docker',
-    'nvidia-docker2',
-    'nvidia-container-runtime'
-}

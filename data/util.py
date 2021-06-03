@@ -93,32 +93,6 @@ enabled=1
 gpgcheck=0
 """
 
-gpu_repo = """
-[Centos-CUDA]
-name=CentOS CUDA
-baseurl=http://{ip}:8081/repository/centos-cuda/rhel7/$basearch/
-enabled=1
-gpgcheck=0
-
-[Centos-libnvidia-containe]
-name=CentOS libnvidia-containe
-baseurl=http://{ip}:8081/repository/libnvidia-container/centos7/$basearch/
-enabled=1
-gpgcheck=0
-
-[Centos-nvidia-container-runtime]
-name=nvidia-container-runtime
-baseurl=http://{ip}:8081/repository/nvidia-container-runtime/centos7/$basearch
-gpgcheck=0
-enabled=1
-
-[Centos-nvidia-docker]
-name=nvidia-docker
-baseurl=http://{ip}:8081/repository/nvidia-docker/centos7/$basearch
-gpgcheck=0
-"""
-
-
 def create_yum_repo():
     if common.get('architectures') == "arm64":
         try:
@@ -135,13 +109,10 @@ def create_yum_repo():
             ip = get_host_ip()
             k_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
             k_repo.write(kubeops_repo_amd64.format(ip=ip))
-            g_repo = open("/etc/yum.repos.d/gpu.repo", "w")
-            g_repo.write(gpu_repo.format(ip=ip))
         except IOError:
             print("Error: 没有找到文件或读取文件失败")
         else:
-            print("gpu.repo: 写入成功")
-            g_repo.close()
+            print("kubeops.repo: 写入成功")
             k_repo.close()
     cmd = 'yum clean all && rm -rf /var/cache/yum/* && yum makecache'
     system(cmd)
@@ -221,14 +192,6 @@ def download(k8s_version):
         cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
         print('Command: ',cmd)
         system(cmd)
-    print('\n')
-
-    if common.get(k8s_version,'architectures')  == 'amd64':
-        separate('NVIDIA rpm download |', common.get('architectures'))
-        for rpm in rpms.rpms_gpu:
-            cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
-            print('Command: ', cmd)
-            system(cmd)
     print('\n')
 
     separate(k8s_version,'Download finished |',common.get('architectures'))
