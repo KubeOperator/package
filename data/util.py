@@ -99,12 +99,10 @@ ubuntu_apt_amd64 = """
 deb http://{ip}:8081/repository/ubuntu bionic main restricted universe multiverse
 deb http://{ip}:8081/repository/ubuntu bionic-security main restricted universe multiverse
 deb http://{ip}:8081/repository/ubuntu bionic-updates main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu bionic-proposed main restricted universe multiverse
 deb http://{ip}:8081/repository/ubuntu bionic-backports main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu bionic main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu bionic-security main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu bionic-updates main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu bionic-proposed main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu bionic-backports main restricted universe multiverse
 """
 
@@ -112,12 +110,10 @@ ubuntu_apt_arm64 = """
 deb http://{ip}:8081/repository/ubuntu-ports bionic main restricted universe multiverse
 deb http://{ip}:8081/repository/ubuntu-ports bionic-security main restricted universe multiverse
 deb http://{ip}:8081/repository/ubuntu-ports bionic-updates main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu-ports bionic-proposed main restricted universe multiverse
 deb http://{ip}:8081/repository/ubuntu-ports bionic-backports main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu-ports bionic main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu-ports bionic-security main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu-ports bionic-updates main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports bionic-proposed main restricted universe multiverse
 deb-src http://{ip}:8081/repository/ubuntu-ports bionic-backports main restricted universe multiverse
 """
 
