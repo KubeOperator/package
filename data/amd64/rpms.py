@@ -1,7 +1,27 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-rpms_base={
+deb_base={
+    'ceph-common',
+    'nfs-common',
+    'jq',
+    'conntrack',
+    'bash-completion',
+    'libseccomp2',
+    'psmisc',
+    'rsync',
+    'socat',
+    'ipset',
+    'ipvsadm',
+    'haproxy',
+    'chrony',
+    'lvm2',
+    'open-iscsi',
+    'kpartx',
+    'sshpass'
+}
+
+centos_rpms_base={
     'bash-completion',
     'chrony',
     'conntrack-tools',

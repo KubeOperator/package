@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 # coding: utf-8
 
-import socket,platform,sys
-from os import system,mkdir,getcwd
+import socket, platform, sys
+from os import system, mkdir, getcwd
 from data import version
+
 
 # 获取系统平台架构
 def get_host_arch():
@@ -15,24 +16,35 @@ def get_host_arch():
     return os
 
 
+# 获取系统名称
+def get_host_platform():
+    plat = platform.platform()
+    pl = ""
+    if "centos" in plat.lower():
+        pl = "centos"
+    else:
+        pl = 'ubuntu'
+    print("当前系统为：", pl)
+    return pl
+
+
 if get_host_arch() == 'amd64':
     from data.amd64 import images, raw, rpms
 elif get_host_arch() == 'arm64':
     from data.arm64 import images, raw, rpms
 
-
-
 current_dir = getcwd()
-raw_save_dirname = current_dir+'/raw'
-rpms_save_dirname = current_dir+'/rpms'
-images_save_dirname = current_dir+'/images'
+raw_save_dirname = current_dir + '/raw'
+rpm_save_dirname = current_dir + '/rpms'
+images_save_dirname = current_dir + '/images'
 
 try:
     mkdir(raw_save_dirname)
-    mkdir(rpms_save_dirname)
+    mkdir(rpm_save_dirname)
     mkdir(images_save_dirname)
 except:
     pass
+
 
 # 查询本机ip地址
 def get_host_ip():
@@ -44,6 +56,7 @@ def get_host_ip():
         s.close()
     return ip
 
+
 #  公共参数
 common = {
     'local_hostname': get_host_ip(),
@@ -51,6 +64,7 @@ common = {
     'registry_port': '8082',
     'architectures': get_host_arch(),
     'kube_version': sys.argv[1],
+    'plat_form': get_host_platform(),
 }
 
 kubeops_repo_amd64 = """
@@ -93,12 +107,44 @@ enabled=1
 gpgcheck=0
 """
 
+ubuntu_apt_amd64 = """
+deb http://{ip}:8081/repository/ubuntu bionic main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu bionic-security main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu bionic-updates main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu bionic-proposed main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu bionic-backports main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu bionic main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu bionic-security main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu bionic-updates main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu bionic-proposed main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu bionic-backports main restricted universe multiverse
+"""
+
+ubuntu_apt_arm64 = """
+deb http://{ip}:8081/repository/ubuntu-ports bionic main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports bionic-security main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports bionic-updates main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports bionic-proposed main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports bionic-backports main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports bionic main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports bionic-security main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports bionic-updates main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports bionic-proposed main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports bionic-backports main restricted universe multiverse
+"""
+
+
 def create_yum_repo():
     if common.get('architectures') == "arm64":
         try:
-            a_repo = open("/etc/yum.repos.d/kubeops.repo","w")
-            ip = get_host_ip()
-            a_repo.write(kubeops_repo_arm64.format(ip=ip))
+            if common.get('plat_form') == "ubuntu":
+                a_repo = open("/etc/apt/sources.list", "w")
+                ip = get_host_ip()
+                a_repo.write(ubuntu_apt_arm64.format(ip=ip))
+            else:
+                a_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
+                ip = get_host_ip()
+                a_repo.write(kubeops_repo_arm64.format(ip=ip))
         except IOError:
             print("Error: 没有找到文件或读取文件失败")
         else:
@@ -106,19 +152,29 @@ def create_yum_repo():
 
     if common.get('architectures') == "amd64":
         try:
-            ip = get_host_ip()
-            k_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
-            k_repo.write(kubeops_repo_amd64.format(ip=ip))
+            if common.get('plat_form') == "ubuntu":
+                ip = get_host_ip()
+                k_repo = open("/etc/apt/sources.list", "w")
+                k_repo.write(ubuntu_apt_amd64.format(ip=ip))
+            else:
+                ip = get_host_ip()
+                k_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
+                k_repo.write(kubeops_repo_amd64.format(ip=ip))
         except IOError:
             print("Error: 没有找到文件或读取文件失败")
         else:
             print("kubeops.repo: 写入成功")
             k_repo.close()
-    cmd = 'yum clean all && rm -rf /var/cache/yum/* && yum makecache'
+    if common.get('plat_form') == "centos":
+        cmd = 'yum clean all && rm -rf /var/cache/yum/* && yum makecache'
+    else:
+        separate("Ubuntu", 'apt update |', common.get('architectures'))
+        cmd = 'apt-get autoclean && apt-get clean&& apt-get update -y'
     system(cmd)
 
+
 def separate(v, n, t):
-    print("********************",v,n,t,"********************",flush=True)
+    print("********************", v, n, t, "********************", flush=True)
 
 
 def download(k8s_version):
@@ -128,21 +184,21 @@ def download(k8s_version):
     except SystemError:
         print("Error: 镜像清理失败")
 
-    separate(k8s_version,'K8S image pull |',common.get('architectures'))
+    separate(k8s_version, 'K8S image pull |', common.get('architectures'))
     for name, value in images.k8s_images.items():
         url = value
         k = dict()
         k.update(version.version_mg(k8s_version))
         k.update(common)
         url = url.format(**k)
-        cmd_pull = 'docker pull '+url
-        print('Command: ',cmd_pull)
-        cmd_remove = 'docker rmi -f '+url
+        cmd_pull = 'docker pull ' + url
+        print('Command: ', cmd_pull)
+        cmd_remove = 'docker rmi -f ' + url
         system(cmd_pull)
         system(cmd_remove)
     print('\n')
 
-    separate(k8s_version,'App image pull |',common.get('architectures'))
+    separate(k8s_version, 'App image pull |', common.get('architectures'))
     for i in range(len(images.app_images)):
         k = dict()
         k.update(common)
@@ -150,28 +206,28 @@ def download(k8s_version):
         m = images.app_images[i]
         for image in m:
             img = image.format(**k)
-            cmd_pull = 'docker pull '+img
-            print('Command: ',cmd_pull)
-            cmd_remove = 'docker rmi -f '+img
+            cmd_pull = 'docker pull ' + img
+            print('Command: ', cmd_pull)
+            cmd_remove = 'docker rmi -f ' + img
             system(cmd_pull)
             system(cmd_remove)
             print('\n')
 
-    separate(k8s_version,'Storage image pull |',common.get('architectures'))
+    separate(k8s_version, 'Storage image pull |', common.get('architectures'))
     for name, value in images.storage_images.items():
         url = value
         k = dict()
         k.update(version.version_mg(k8s_version))
         k.update(common)
         url = url.format(**k)
-        cmd_pull = 'docker pull '+url
-        print('Command: ',cmd_pull)
-        cmd_remove = 'docker rmi -f '+url
+        cmd_pull = 'docker pull ' + url
+        print('Command: ', cmd_pull)
+        cmd_remove = 'docker rmi -f ' + url
         system(cmd_pull)
         system(cmd_remove)
     print('\n')
 
-    separate(k8s_version,'Raw downalod |',common.get('architectures'))
+    separate(k8s_version, 'Raw downalod |', common.get('architectures'))
     for name, value in raw.raw_url.items():
         url = value
         k = dict()
@@ -182,22 +238,30 @@ def download(k8s_version):
         }
         k.update(v)
         url = url.format(**k)
-        cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P '+ raw_save_dirname
-        print('Command: ',cmd)
+        cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P ' + raw_save_dirname
+        print('Command: ', cmd)
         system(cmd)
     print('\n')
 
-    separate(k8s_version,'Rpm download |',common.get('architectures'))
-    for rpm in rpms.rpms_base:
-        cmd = 'yumdownloader --resolve --destdir=' + rpms_save_dirname + ' ' + rpm
-        print('Command: ',cmd)
-        system(cmd)
-    print('\n')
+    separate(k8s_version, 'Rpm download |', common.get('architectures'))
+    if common.get('plat_form') == "centos":
+        for rpm in rpms.centos_rpms_base:
+            cmd = 'yumdownloader --resolve --destdir=' + rpm_save_dirname + ' ' + rpm
+            print('Command: ', cmd)
+            system(cmd)
 
-    separate(k8s_version,'Download finished |',common.get('architectures'))
+    if common.get('plat_form') == "ubuntu":
+        for rpm in rpms.deb_base:
+            cmd = 'apt-get install -y --download-only -o=dir::cache=' + rpm_save_dirname + ' ' + rpm
+            print('Command: ', cmd)
+            system(cmd)
+            print('\n')
+
+    separate(k8s_version, 'Download finished |', common.get('architectures'))
+
 
 def run():
     create_yum_repo()
     kube_version = common.get('kube_version').split(",")
     for i in kube_version:
-     download(i)
+        download(i)
