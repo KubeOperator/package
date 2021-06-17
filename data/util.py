@@ -45,21 +45,9 @@ try:
 except:
     pass
 
-
-# 查询本机ip地址
-def get_host_ip():
-    try:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect(('114.114.114.114', 80))
-        ip = s.getsockname()[0]
-    finally:
-        s.close()
-    return ip
-
-
 #  公共参数
 common = {
-    'local_hostname': get_host_ip(),
+    'local_hostname': sys.argv[2],
     'repo_port': '8081',
     'registry_port': '8082',
     'architectures': get_host_arch(),
@@ -139,11 +127,11 @@ def create_yum_repo():
         try:
             if common.get('plat_form') == "ubuntu":
                 a_repo = open("/etc/apt/sources.list", "w")
-                ip = get_host_ip()
+                ip = common.get('local_hostname')
                 a_repo.write(ubuntu_apt_arm64.format(ip=ip))
             else:
                 a_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
-                ip = get_host_ip()
+                ip = common.get('local_hostname')
                 a_repo.write(kubeops_repo_arm64.format(ip=ip))
         except IOError:
             print("Error: 没有找到文件或读取文件失败")
@@ -153,11 +141,11 @@ def create_yum_repo():
     if common.get('architectures') == "amd64":
         try:
             if common.get('plat_form') == "ubuntu":
-                ip = get_host_ip()
+                ip = common.get('local_hostname')
                 k_repo = open("/etc/apt/sources.list", "w")
                 k_repo.write(ubuntu_apt_amd64.format(ip=ip))
             else:
-                ip = get_host_ip()
+                ip = common.get('local_hostname')
                 k_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
                 k_repo.write(kubeops_repo_amd64.format(ip=ip))
         except IOError:
