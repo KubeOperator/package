@@ -19,5 +19,7 @@ raw_url = {
     'kube_proxy_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/k8s/{k8s_version}/{architectures}/kube-proxy.tar',
     'pause_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/k8s/{k8s_version}/{architectures}/pause.tar',
     # ----------------------- helm 仓库地址 --------------------
-    'helm3_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/{helm_v3_version}/helm-{helm_v3_version}-linux-{architectures}.tar.gz'
+    'helm3_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/{helm_v3_version}/helm-{helm_v3_version}-linux-{architectures}.tar.gz',
+    # ----------------------- Ubuntu chrony 安装包下载地址 --------------------
+    'chrony_download_url': "http://{local_hostname}:{repo_port}/repository/oss-proxy/chrony/{architectures}/chrony_xenial.tar.gz"
 }

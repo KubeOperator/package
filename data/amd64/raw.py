@@ -31,5 +31,5 @@ raw_url = {
     'fusioncompute_vhd_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/fusioncompute/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-vda.vhd',
     'fusioncompute_ovf_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/fusioncompute/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf',
     # ----------------------- Ubuntu chrony 安装包下载地址 --------------------
-    'chrony_download_url': "http://{local_hostname}:{repo_port}/repository/oss-proxy/chrony/chrony_xenial.tar.gz"
+    'chrony_download_url': "http://{local_hostname}:{repo_port}/repository/oss-proxy/chrony/{architectures}/chrony_xenial.tar.gz"
 }
