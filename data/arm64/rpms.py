@@ -18,7 +18,8 @@ deb_base={
     'lvm2',
     'open-iscsi',
     'kpartx',
-    'sshpass'
+    'sshpass',
+    'python-apt',
 }
 
 centos_rpms_base={
