@@ -2,7 +2,7 @@
 # coding: utf-8
 
 import socket, platform, sys
-from os import system, mkdir, getcwd
+from os import system, mkdir, getcwd, popen
 from data import version
 
 
@@ -53,6 +53,7 @@ common = {
     'architectures': get_host_arch(),
     'kube_version': sys.argv[1],
     'plat_form': get_host_platform(),
+    'ubuntu_version': popen("lsb_release -c|awk '{print $2}'").read().strip(),
 }
 
 kubeops_repo_amd64 = """
@@ -96,25 +97,25 @@ gpgcheck=0
 """
 
 ubuntu_apt_amd64 = """
-deb http://{ip}:8081/repository/ubuntu bionic main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu bionic-security main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu bionic-updates main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu bionic-backports main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu bionic main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu bionic-security main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu bionic-updates main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu bionic-backports main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu {ubuntu_version} main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu {ubuntu_version}-security main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu {ubuntu_version}-updates main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu {ubuntu_version}-backports main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version} main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version}-security main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version}-updates main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version}-backports main restricted universe multiverse
 """
 
 ubuntu_apt_arm64 = """
-deb http://{ip}:8081/repository/ubuntu-ports bionic main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu-ports bionic-security main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu-ports bionic-updates main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu-ports bionic-backports main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports bionic main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports bionic-security main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports bionic-updates main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports bionic-backports main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version} main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-security main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-updates main restricted universe multiverse
+deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-backports main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version} main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-security main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-updates main restricted universe multiverse
+deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-backports main restricted universe multiverse
 """
 
 
@@ -124,7 +125,8 @@ def create_yum_repo():
             if common.get('plat_form') == "ubuntu":
                 a_repo = open("/etc/apt/sources.list", "w")
                 ip = common.get('local_hostname')
-                a_repo.write(ubuntu_apt_arm64.format(ip=ip))
+                ubuntu_version = common.get('ubuntu_version')
+                a_repo.write(ubuntu_apt_arm64.format(ip=ip, ubuntu_version=ubuntu_version))
             else:
                 a_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
                 ip = common.get('local_hostname')
@@ -153,7 +155,7 @@ def create_yum_repo():
         cmd = 'yum clean all && rm -rf /var/cache/yum/* && yum makecache'
     else:
         separate("Ubuntu", 'apt update |', common.get('architectures'))
-        cmd = 'apt-get autoclean && apt-get clean&& apt-get update -y'
+        cmd = 'apt-get autoclean && apt-get clean && apt-get update -y'
     system(cmd)
 
 
@@ -161,7 +163,41 @@ def separate(v, n, t):
     print("********************", v, n, t, "********************", flush=True)
 
 
-def download(k8s_version):
+def raw_download(k8s_version):
+    separate(k8s_version, 'Raw downalod |', common.get('architectures'))
+    for name, value in raw.raw_url.items():
+        url = value
+        k = dict()
+        k.update(version.version_mg(k8s_version))
+        k.update(common)
+        v = {
+            'k8s_version': k8s_version
+        }
+        k.update(v)
+        url = url.format(**k)
+        cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P ' + raw_save_dirname
+        print('Command: ', cmd)
+        system(cmd)
+    print('\n')
+
+
+def rpm_download(k8s_version):
+    separate(k8s_version, 'Rpm download |', common.get('architectures'))
+    if common.get('plat_form') == "centos":
+        for rpm in rpms.centos_rpms_base:
+            cmd = 'yumdownloader --resolve --destdir=' + rpm_save_dirname + ' ' + rpm
+            print('Command: ', cmd)
+            system(cmd)
+
+    if common.get('plat_form') == "ubuntu":
+        for rpm in rpms.deb_base:
+            cmd = 'apt-get install -y --download-only -o=dir::cache=' + rpm_save_dirname + ' ' + rpm
+            print('Command: ', cmd)
+            system(cmd)
+            print('\n')
+
+
+def image_download(k8s_version):
     try:
         clear_image = "docker system prune --all --volumes -f"
         system(clear_image)
@@ -210,37 +246,6 @@ def download(k8s_version):
         system(cmd_pull)
         system(cmd_remove)
     print('\n')
-
-    separate(k8s_version, 'Raw downalod |', common.get('architectures'))
-    for name, value in raw.raw_url.items():
-        url = value
-        k = dict()
-        k.update(version.version_mg(k8s_version))
-        k.update(common)
-        v = {
-            'k8s_version': k8s_version
-        }
-        k.update(v)
-        url = url.format(**k)
-        cmd = 'wget --timeout=600 -nv --no-check-certificate ' + url + ' -P ' + raw_save_dirname
-        print('Command: ', cmd)
-        system(cmd)
-    print('\n')
-
-    separate(k8s_version, 'Rpm download |', common.get('architectures'))
-    if common.get('plat_form') == "centos":
-        for rpm in rpms.centos_rpms_base:
-            cmd = 'yumdownloader --resolve --destdir=' + rpm_save_dirname + ' ' + rpm
-            print('Command: ', cmd)
-            system(cmd)
-
-    if common.get('plat_form') == "ubuntu":
-        for rpm in rpms.deb_base:
-            cmd = 'apt-get install -y --download-only -o=dir::cache=' + rpm_save_dirname + ' ' + rpm
-            print('Command: ', cmd)
-            system(cmd)
-            print('\n')
-
     separate(k8s_version, 'Download finished |', common.get('architectures'))
 
 
@@ -248,4 +253,7 @@ def run():
     create_yum_repo()
     kube_version = common.get('kube_version').split(",")
     for i in kube_version:
-        download(i)
+        if common.get('plat_form') != "ubuntu":
+            raw_download(i)
+            image_download(i)
+        rpm_download(i)
