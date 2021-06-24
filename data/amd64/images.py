@@ -23,5 +23,5 @@ app_images = {
     # chartmuseum version: 2.13.0, appVersion: 0.12.0
     'chartmuseum_image': '{local_hostname}:{registry_port}/chartmuseum/chartmuseum:v0.12.0',
     # registry version: 1.9.3, appVersion: 2.7.1
-    'docker_registry_image': '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1-amd64'
+    'docker_registry_image': '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1'
 }

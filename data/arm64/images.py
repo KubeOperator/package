@@ -21,7 +21,7 @@ k8s_images = {
 
 app_images = {
     # registry
-    'docker_registry_image': '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1-arm64',
+    'docker_registry_image': '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1',
     # chartmuseum
-    'chartmuseum_image': '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0-arm64'
+    'chartmuseum_image': '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0'
 }
