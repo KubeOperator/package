@@ -97,25 +97,25 @@ gpgcheck=0
 """
 
 ubuntu_apt_amd64 = """
-deb http://{ip}:8081/repository/ubuntu {ubuntu_version} main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu {ubuntu_version}-security main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu {ubuntu_version}-updates main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu {ubuntu_version}-backports main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version} main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version}-security main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version}-updates main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu {ubuntu_version}-backports main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version} main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version}-security main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version}-updates main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version}-backports main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version} main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version}-security main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version}-updates main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-{ubuntu_version} {ubuntu_version}-backports main restricted universe multiverse
 """
 
 ubuntu_apt_arm64 = """
-deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version} main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-security main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-updates main restricted universe multiverse
-deb http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-backports main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version} main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-security main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-updates main restricted universe multiverse
-deb-src http://{ip}:8081/repository/ubuntu-ports {ubuntu_version}-backports main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version} main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version}-security main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version}-updates main restricted universe multiverse
+deb http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version}-backports main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version} main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version}-security main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version}-updates main restricted universe multiverse
+deb-src http://{ip}:8081/repository/apt-proxy-arm64-{ubuntu_version}  {ubuntu_version}-backports main restricted universe multiverse
 """
 
 
