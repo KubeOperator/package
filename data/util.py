@@ -53,7 +53,7 @@ common = {
     'architectures': get_host_arch(),
     'kube_version': sys.argv[1],
     'plat_form': get_host_platform(),
-    'ubuntu_version': popen("lsb_release -c|awk '{print $2}'").read().strip(),
+    'ubuntu_version': popen("cat /etc/lsb-release |grep DISTRIB_CODENAME|awk -F= '{print $2}'").read().strip(),
 }
 
 kubeops_repo_amd64 = """
