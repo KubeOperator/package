@@ -142,7 +142,7 @@ def create_yum_repo():
                 ip = common.get('local_hostname')
                 k_repo = open("/etc/apt/sources.list", "w")
                 ubuntu_version = common.get('ubuntu_version')
-                a_repo.write(ubuntu_apt_arm64.format(ip=ip, ubuntu_version=ubuntu_version))
+                k_repo.write(ubuntu_apt_amd64.format(ip=ip, ubuntu_version=ubuntu_version))
             else:
                 ip = common.get('local_hostname')
                 k_repo = open("/etc/yum.repos.d/kubeops.repo", "w")
