@@ -609,6 +609,80 @@ v1_18_18 =  {
     'kubernetesui_metrics_scraper': 'v1.0.4'
 }
 
+v1_18_20 =  {
+    'pause_version':  '3.2',
+    'busybox_version': '1.28',
+    'crictl_version': 'v1.18.0',
+    'npd_version': 'v0.8.1',
+    'kube_bench_version': 'v0.0.1',
+    'runc_version': 'v1.0.0-rc91',
+    'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
+    # 存储类镜像版本设置
+    'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'nfs_provisioner_version': 'v3.1.0-k8s1.11',
+    'vsphere_csi_version': 'v1.0.3',
+    'govc_version': 'v0.23.0',
+    'rook_ceph_version': 'v1.3.6',
+    'ceph_version': 'v14.2.9',
+    'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
+    # rook csi
+    'rook_csi_ceph_version': 'v2.1.2',
+    'rook_csi_resizer_version': 'v0.4.0',
+    'rook_csi_snapshotter_version': 'v1.2.2',
+    'rook_csi_attacher_version': 'v2.1.0',
+    'rook_csi_provisioner_version': 'v1.4.0',
+    'rook_csi_node_driver_registrar_version': 'v1.2.0',
+    # huawei csi
+    'huawei_csi_attacher_version': 'v1.2.1',
+    'huawei_csi_provisioner_version': 'v1.4.0',
+    'huawei_csi_node_driver_registrar_version': 'v1.2.0',
+    # vsphere csi
+    'vsphere_csi_livenessprobe_version': 'v1.1.0',
+    'vsphere_csi_attacher_version': 'v1.2.1',
+    'vsphere_csi_provisioner_version': 'v1.4.0',
+    'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
+    # etcd版本
+    'etcd_version':'v3.4.14',
+    # docker版本
+    'docker_version':'19.03.15',
+    # containerd版本
+    'containerd_version':'1.4.3',
+    # flannel版本
+    'flannel_version':'v0.13.0',
+    # calico版本
+    'calico_version':'v3.18.4',
+    # cilium版本
+    'cilium_version':'v1.9.5',
+    # coredns版本
+    'coredns_version':'1.6.7',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
+    # helm v2 版本
+    'helm_v2_version':'v2.17.0',
+    # helm v3 版本
+    'helm_v3_version':'v3.6.0',
+    # nginx-ingress版本
+    'nginx_ingress_version':'0.33.0',
+    # traefik-ingress版本
+    'traefik_ingress_version':'v2.4.8',
+    # metrics-server版本
+    'metrics_server_version':'v0.3.6',
+    # istio版本
+    'istio_version': '1.8.0',
+    # kubernetesui dashboard版本
+    'kubernetesui_dashboard': 'v2.2.0',
+    'kubernetesui_metrics_scraper': 'v1.0.6'
+}
+
 v1_20_4 =  {
     'pause_version':  '3.2',
     'busybox_version': '1.28',
@@ -684,6 +758,80 @@ v1_20_4 =  {
 }
 
 v1_20_6 =  {
+    'pause_version':  '3.2',
+    'busybox_version': '1.28',
+    'crictl_version': 'v1.18.0',
+    'npd_version': 'v0.8.1',
+    'kube_bench_version': 'v0.0.1',
+    'runc_version': 'v1.0.0-rc91',
+    'cni_version': 'v0.8.6',
+    'cni_calico_version': 'v3.12.3',
+    # 存储类镜像版本设置
+    'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'nfs_provisioner_version': 'v3.1.0-k8s1.11',
+    'vsphere_csi_version': 'v1.0.3',
+    'govc_version': 'v0.23.0',
+    'rook_ceph_version': 'v1.3.6',
+    'ceph_version': 'v14.2.9',
+    'huawei_csi_driver_version': '2.2.9',
+    'cinder_csi_version': 'v1.20.0',
+    # rook csi
+    'rook_csi_ceph_version': 'v2.1.2',
+    'rook_csi_resizer_version': 'v0.4.0',
+    'rook_csi_snapshotter_version': 'v1.2.2',
+    'rook_csi_attacher_version': 'v2.1.0',
+    'rook_csi_provisioner_version': 'v1.4.0',
+    'rook_csi_node_driver_registrar_version': 'v1.2.0',
+    # huawei csi
+    'huawei_csi_attacher_version': 'v1.2.1',
+    'huawei_csi_provisioner_version': 'v1.4.0',
+    'huawei_csi_node_driver_registrar_version': 'v1.2.0',
+    # vsphere csi
+    'vsphere_csi_livenessprobe_version': 'v1.1.0',
+    'vsphere_csi_attacher_version': 'v1.2.1',
+    'vsphere_csi_provisioner_version': 'v1.4.0',
+    'vsphere_csi_node_driver_registrar_version': 'v1.2.0',
+    # cinder csi
+    'cinder_csi_attacher_version': 'v3.1.0',
+    'cinder_csi_provisioner_version': 'v2.1.1',
+    'cinder_csi_snapshotter_version': 'v2.1.3',
+    'cinder_csi_resizer_version': 'v1.1.0',
+    'cinder_csi_livenessprobe_version': 'v2.1.0',
+    'cinder_csi_node_driver_registrar_version': 'v1.3.0',
+    # etcd版本
+    'etcd_version':'v3.4.14',
+    # docker版本
+    'docker_version':'19.03.15',
+    # containerd版本
+    'containerd_version':'1.4.3',
+    # flannel版本
+    'flannel_version':'v0.13.0',
+    # calico版本
+    'calico_version':'v3.18.4',
+    # cilium版本
+    'cilium_version':'v1.9.5',
+    # coredns版本
+    'coredns_version':'1.7.0',
+    # dns-cache版本
+    'dns_cache_version':'1.17.0',
+    # helm v2 版本
+    'helm_v2_version':'v2.17.0',
+    # helm v3 版本
+    'helm_v3_version':'v3.6.0',
+    # nginx-ingress版本
+    'nginx_ingress_version':'0.33.0',
+    # traefik-ingress版本
+    'traefik_ingress_version':'v2.4.8',
+    # metrics-server版本
+    'metrics_server_version':'v0.3.6',
+    # istio版本
+    'istio_version': '1.8.0',
+    # kubernetesui dashboard版本
+    'kubernetesui_dashboard': 'v2.2.0',
+    'kubernetesui_metrics_scraper': 'v1.0.6'
+}
+
+v1_20_8 =  {
     'pause_version':  '3.2',
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
