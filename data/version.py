@@ -655,7 +655,7 @@ v1_18_20 =  {
     # etcd版本
     'etcd_version':'v3.4.14',
     # docker版本
-    'docker_version':'19.03.15',
+    'docker_version':'20.10.7',
     # containerd版本
     'containerd_version':'1.4.3',
     # flannel版本
@@ -877,7 +877,7 @@ v1_20_8 =  {
     # etcd版本
     'etcd_version':'v3.4.14',
     # docker版本
-    'docker_version':'19.03.15',
+    'docker_version':'20.10.7',
     # containerd版本
     'containerd_version':'1.4.3',
     # flannel版本
