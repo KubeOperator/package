@@ -192,7 +192,8 @@ def rpm_download(k8s_version):
 
     if common.get('plat_form') == "ubuntu":
         for rpm in rpms.deb_base:
-            cmd = 'apt-get install -y --download-only -o=dir::cache=' + rpm_save_dirname + ' ' + rpm
+            # cmd = 'apt-get install -y --download-only -o=dir::cache=' + rpm_save_dirname + ' ' + rpm
+            cmd = 'apt-get install -y ' + rpm
             print('Command: ', cmd)
             system(cmd)
             print('\n')
