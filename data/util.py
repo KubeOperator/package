@@ -156,7 +156,7 @@ def create_yum_repo():
         cmd = 'yum clean all && rm -rf /var/cache/yum/* && yum makecache'
     else:
         separate("Ubuntu", 'apt update |', common.get('architectures'))
-        cmd = 'apt-get autoclean && apt-get clean && apt-get update -y'
+        cmd = 'apt-get clean && rm -rf /var/lib/apt/lists/*  && apt-get update '
     system(cmd)
 
 
@@ -182,8 +182,8 @@ def raw_download(k8s_version):
     print('\n')
 
 
-def rpm_download(k8s_version):
-    separate(k8s_version, 'Rpm download |', common.get('architectures'))
+def rpm_download():
+    separate('Ubuntu', 'Rpm download |', common.get('architectures'))
     if common.get('plat_form') == "centos":
         for rpm in rpms.centos_rpms_base:
             cmd = 'yumdownloader --resolve --destdir=' + rpm_save_dirname + ' ' + rpm
@@ -258,4 +258,4 @@ def run():
         if common.get('plat_form') != "ubuntu":
             raw_download(i)
             image_download(i)
-        rpm_download(i)
+    rpm_download()
