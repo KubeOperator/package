@@ -18,7 +18,7 @@ v1_18_15 =  {
     # docker版本
     'docker_version':'19.03.15',
     # calico版本
-    'calico_version':'v3.16.5',
+    'calico_version':'v3.19.1',
     # coredns版本
     'coredns_version':'1.8.0',
     # helm v3 版本
