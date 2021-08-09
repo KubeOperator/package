@@ -85,7 +85,7 @@ v1_18_4 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -159,7 +159,7 @@ v1_18_6 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -233,7 +233,7 @@ v1_18_8 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -307,7 +307,7 @@ v1_18_10 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -381,7 +381,7 @@ v1_18_12 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -455,7 +455,7 @@ v1_18_14 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -529,7 +529,7 @@ v1_18_15 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -603,7 +603,7 @@ v1_18_18 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -677,7 +677,7 @@ v1_18_20 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.4.8',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -751,7 +751,7 @@ v1_20_4 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.2.1',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -825,7 +825,7 @@ v1_20_6 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.4.8',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
@@ -899,7 +899,7 @@ v1_20_8 =  {
     # traefik-ingress版本
     'traefik_ingress_version':'v2.4.8',
     # metrics-server版本
-    'metrics_server_version':'v0.3.6',
+    'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.8.0',
     # kubernetesui dashboard版本
