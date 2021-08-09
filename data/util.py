@@ -152,13 +152,13 @@ def create_yum_repo():
         else:
             print("kubeops.repo: 写入成功")
             k_repo.close()
+    cmd = ""
     if common.get('plat_form') == "centos":
         cmd = 'yum clean all && rm -rf /var/cache/yum/* && yum makecache'
-    else:
+    elif common.get('plat_form') == "ubuntu":
         separate("Ubuntu", 'apt update |', common.get('architectures'))
         cmd = 'apt-get clean && rm -rf /var/lib/apt/lists/*  && apt-get update '
     system(cmd)
-
 
 def separate(v, n, t):
     print("********************", v, n, t, "********************", flush=True)
