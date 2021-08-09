@@ -158,7 +158,7 @@ def create_yum_repo():
         system(cmd)
     elif common.get('plat_form') == "ubuntu":
         separate("Ubuntu", 'apt update |', common.get('architectures'))
-        cmd = 'apt-get clean && rm -rf /var/lib/apt/lists/*  && apt-get update '
+        cmd = 'apt-get update && apt-get install tzdata -y'
         system(cmd)
 
 def separate(v, n, t):
