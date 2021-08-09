@@ -20,6 +20,7 @@ deb_base={
     'kpartx',
     'sshpass',
     'python-apt',
+    'keepalived',
 }
 
 centos_rpms_base={
@@ -107,5 +108,9 @@ centos_rpms_base={
     'glusterfs',
     'glusterfs-libs',
     'glusterfs-fuse',
-    'glusterfs-client-xlators'
+    'glusterfs-client-xlators',
+    'keepalived',
+    'lm_sensors-libs',
+    'net-snmp-agent-libs',
+    'net-snmp-libs',
 }
