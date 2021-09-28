@@ -4,6 +4,7 @@
 deb_base={
     'ceph-common',
     'nfs-common',
+    'glusterfs-client',
     'jq',
     'conntrack',
     'bash-completion',
