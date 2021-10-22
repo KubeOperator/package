@@ -93,7 +93,7 @@ v1_18_4 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_6 =  {
@@ -169,7 +169,7 @@ v1_18_6 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_8 =  {
@@ -245,7 +245,7 @@ v1_18_8 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_10 =  {
@@ -321,7 +321,7 @@ v1_18_10 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_12 =  {
@@ -397,7 +397,7 @@ v1_18_12 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_14 =  {
@@ -473,7 +473,7 @@ v1_18_14 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_15 =  {
@@ -549,7 +549,7 @@ v1_18_15 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_18 =  {
@@ -625,7 +625,7 @@ v1_18_18 =  {
     'kubernetesui_dashboard': 'v2.0.3',
     'kubernetesui_metrics_scraper': 'v1.0.4',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_18_20 =  {
@@ -701,7 +701,7 @@ v1_18_20 =  {
     'kubernetesui_dashboard': 'v2.2.0',
     'kubernetesui_metrics_scraper': 'v1.0.6',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_20_4 =  {
@@ -777,7 +777,7 @@ v1_20_4 =  {
     'kubernetesui_dashboard': 'v2.2.0',
     'kubernetesui_metrics_scraper': 'v1.0.6',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_20_6 =  {
@@ -853,7 +853,7 @@ v1_20_6 =  {
     'kubernetesui_dashboard': 'v2.2.0',
     'kubernetesui_metrics_scraper': 'v1.0.6',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_20_8 =  {
@@ -929,7 +929,7 @@ v1_20_8 =  {
     'kubernetesui_dashboard': 'v2.2.0',
     'kubernetesui_metrics_scraper': 'v1.0.6',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
 
 v1_20_10 =  {
@@ -1005,5 +1005,5 @@ v1_20_10 =  {
     'kubernetesui_dashboard': 'v2.2.0',
     'kubernetesui_metrics_scraper': 'v1.0.6',
     # kubepi版本
-    'kubepi_version': 'v1.0.1'
+    'kubepi_version': 'v1.1.0'
 }
