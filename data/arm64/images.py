@@ -33,11 +33,6 @@ k8s_images = {
 app_images = [{
     # registry
     '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1',
-    # kubepi
-    '{local_hostname}:{registry_port}/kubeoperator/kubepi-server:{kubepi_version}',
-    # kubernetesui dashboard
-    '{local_hostname}:{registry_port}/kubernetesui/dashboard:{kubernetesui_dashboard}',
-    '{local_hostname}:{registry_port}/kubernetesui/metrics-scraper:{kubernetesui_metrics_scraper}',
     # prometheus
     '{local_hostname}:{registry_port}/prom/node-exporter:v0.18.1',
     '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.5',

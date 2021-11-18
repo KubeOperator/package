@@ -88,12 +88,7 @@ v1_18_4 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_6 =  {
@@ -164,12 +159,7 @@ v1_18_6 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_8 =  {
@@ -240,12 +230,7 @@ v1_18_8 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_10 =  {
@@ -316,12 +301,7 @@ v1_18_10 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_12 =  {
@@ -392,12 +372,7 @@ v1_18_12 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_14 =  {
@@ -468,12 +443,7 @@ v1_18_14 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_15 =  {
@@ -544,12 +514,7 @@ v1_18_15 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_18 =  {
@@ -620,12 +585,7 @@ v1_18_18 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.0.3',
-    'kubernetesui_metrics_scraper': 'v1.0.4',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_18_20 =  {
@@ -696,12 +656,7 @@ v1_18_20 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.2.0',
-    'kubernetesui_metrics_scraper': 'v1.0.6',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_20_4 =  {
@@ -772,12 +727,7 @@ v1_20_4 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.2.0',
-    'kubernetesui_metrics_scraper': 'v1.0.6',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_20_6 =  {
@@ -848,12 +798,7 @@ v1_20_6 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.2.0',
-    'kubernetesui_metrics_scraper': 'v1.0.6',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_20_8 =  {
@@ -924,12 +869,7 @@ v1_20_8 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.2.0',
-    'kubernetesui_metrics_scraper': 'v1.0.6',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
 
 v1_20_10 =  {
@@ -1000,10 +940,5 @@ v1_20_10 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
-    # kubernetesui dashboard版本
-    'kubernetesui_dashboard': 'v2.2.0',
-    'kubernetesui_metrics_scraper': 'v1.0.6',
-    # kubepi版本
-    'kubepi_version': 'v1.1.0'
+    'istio_version': '1.8.0'
 }
