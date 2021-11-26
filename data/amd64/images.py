@@ -33,17 +33,6 @@ k8s_images = {
     'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}',
     # helm2 tiller image
     'helm_tiller_image': '{local_hostname}:{registry_port}/kubeoperator/tiller:{helm_v2_version}'
-#     # nvidia gpu
-#     'nvidia_gpu_operator':  '{local_hostname}:{registry_port}/kubeoperator/gpu-operator:v1.7.0',
-#     'nvidia_cuda':  '{local_hostname}:{registry_port}/kubeoperator/cuda:11.2.1-base-ubi8',
-#     'nvidia_gpu_operator_validator':  '{local_hostname}:{registry_port}/kubeoperator/gpu-operator-validator:v1.7.0',
-#     'nvidia_driver':  '{local_hostname}:{registry_port}/kubeoperator/driver:460.73.01-centos7',
-#     'nvidia_dcgm_exporter':  '{local_hostname}:{registry_port}/kubeoperator/dcgm-exporter:2.1.8-2.4.0-rc.2-ubuntu20.04',
-#     'nvidia_ontainer_toolkit':  '{local_hostname}:{registry_port}/kubeoperator/container-toolkit:1.4.7-ubi8',
-#     'nvidia_k8s_device_plugin':  '{local_hostname}:{registry_port}/kubeoperator/k8s-device-plugin:v0.9.0-ubi8',
-#     'nvidia_gpu_feature_discovery':  '{local_hostname}:{registry_port}/kubeoperator/gpu-feature-discovery:v0.4.1',
-#     'nvidia_k8s_mig-manager':  '{local_hostname}:{registry_port}/kubeoperator/k8s-mig-manager:v0.1.1-ubuntu20.04',
-#     'nvidia_node_feature_discovery':  '{local_hostname}:{registry_port}/kubeoperator/node-feature-discovery:v0.6.0'
 }
 
 app_images = [{
@@ -81,7 +70,10 @@ app_images = [{
     '{local_hostname}:{registry_port}/istio/proxyv2:{istio_version}',
     # grafana
     '{local_hostname}:{registry_port}/grafana/grafana:7.3.3',
-    '{local_hostname}:{registry_port}/curlimages/curl:7.73.0'
+    '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
+    # opa gatekeeper
+    '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper:{gatekeeper_version}',
+    '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper-crds:{gatekeeper_version}'
 },
     {
         # kubeapps version: 5.0.1, appVersion: 2.0.1
