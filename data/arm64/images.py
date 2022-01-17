@@ -33,13 +33,11 @@ k8s_images = {
 app_images = [{
     # registry
     '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1',
-    # prometheus
-    '{local_hostname}:{registry_port}/prom/node-exporter:v0.18.1',
+    # promethus
+    '{local_hostname}:{registry_port}/prom/node-exporter:v1.0.1',
     '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.5',
-    '{local_hostname}:{registry_port}/prom/alertmanager:v0.20.0',
-    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.3.0',
-    '{local_hostname}:{registry_port}/prom/pushgateway:v1.0.1',
-    '{local_hostname}:{registry_port}/prom/prometheus:v2.18.1',
+    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.4.0',
+    '{local_hostname}:{registry_port}/prom/prometheus:v2.20.1',
     # loki
     '{local_hostname}:{registry_port}/grafana/loki:2.0.0',
     '{local_hostname}:{registry_port}/grafana/promtail:2.0.0',
@@ -53,17 +51,17 @@ app_images = [{
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper-crds:{gatekeeper_version}'
 },
     {
-        # loki version: 2.0.0 , appVersion: v2.0.0
+        # loki
         '{local_hostname}:{registry_port}/grafana/promtail:2.1.0',
         '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
-        # promethus version: 11.5.0 , appVersion: 2.18.1
-        '{local_hostname}:{registry_port}/prom/node-exporter:v1.0.1',
-        '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.5',
-        '{local_hostname}:{registry_port}/prom/alertmanager:v0.20.0',
-        '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.3.0',
-        '{local_hostname}:{registry_port}/prom/pushgateway:v1.0.1',
-        '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.4.0',
-        '{local_hostname}:{registry_port}/prom/prometheus:v2.20.1'
+        # promethus
+        '{local_hostname}:{registry_port}/dyrnq/kube-state-metrics:v2.2.4',
+        '{local_hostname}:{registry_port}/prometheus/node-exporter:v1.3.0',
+        '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.5.0',
+        '{local_hostname}:{registry_port}/prometheus/prometheus:v2.31.1',
+        # grafana
+        '{local_hostname}:{registry_port}/grafana/grafana:8.3.1',
+        '{local_hostname}:{registry_port}/curlimages/curl:7.73.0'
     }
 ]
 
