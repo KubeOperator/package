@@ -46,6 +46,7 @@ app_images = [{
     # grafana
     '{local_hostname}:{registry_port}/grafana/grafana:7.3.3',
     '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
+    '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}',
     # opa gatekeeper
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper:{gatekeeper_version}',
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper-crds:{gatekeeper_version}'
@@ -61,7 +62,8 @@ app_images = [{
         '{local_hostname}:{registry_port}/prometheus/prometheus:v2.31.1',
         # grafana
         '{local_hostname}:{registry_port}/grafana/grafana:8.3.1',
-        '{local_hostname}:{registry_port}/curlimages/curl:7.73.0'
+        '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
+        '{local_hostname}:{registry_port}/kubeoperator/busybox:1.31.1'
     }
 ]
 
