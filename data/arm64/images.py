@@ -49,7 +49,10 @@ app_images = [{
     '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}',
     # opa gatekeeper
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper:{gatekeeper_version}',
-    '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper-crds:{gatekeeper_version}'
+    '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper-crds:{gatekeeper_version}',
+    # velero
+    '{local_hostname}:{registry_port}/velero/velero:v1.7.1',
+    '{local_hostname}:{registry_port}/velero/velero-plugin-for-aws:v1.2.1'
 },
     {
         # loki
