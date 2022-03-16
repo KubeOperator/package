@@ -23,7 +23,7 @@ k8s_images = {
     'cilium_image': '{local_hostname}:{registry_port}/cilium/cilium:{cilium_version}',
     'cilium_operator_image': '{local_hostname}:{registry_port}/cilium/operator-generic:{cilium_version}',
     # ingress-controller 镜像地址
-    'nginx_ingress_image': '{local_hostname}:{registry_port}/kubernetes-ingress-controller/nginx-ingress-controller:{nginx_ingress_version}',
+    'nginx_ingress_image': '{local_hostname}:{registry_port}/kubeoperator/ingress-nginx-controller:{nginx_ingress_version}',
     'traefik_ingress_image': '{local_hostname}:{registry_port}/traefik:{traefik_ingress_version}',
     # metrics-server image
     'metrics_server_image': '{local_hostname}:{registry_port}/kubeoperator/metrics-server:{metrics_server_version}',

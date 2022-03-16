@@ -20,7 +20,7 @@ k8s_images = {
     # flannel image 地址
     'flannel_image': '{local_hostname}:{registry_port}/coreos/flannel:{flannel_version}',
     # ingress-controller 镜像地址
-    'nginx_ingress_image': '{local_hostname}:{registry_port}/kubernetes-ingress-controller/nginx-ingress-controller:{nginx_ingress_version}',
+    'nginx_ingress_image': '{local_hostname}:{registry_port}/kubeoperator/ingress-nginx-controller:{nginx_ingress_version}',
     'traefik_ingress_image': '{local_hostname}:{registry_port}/traefik:{traefik_ingress_version}',
     # metrics-server image
     'metrics_server_image': '{local_hostname}:{registry_port}/kubeoperator/metrics-server:{metrics_server_version}',
