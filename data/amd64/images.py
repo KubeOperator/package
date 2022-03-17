@@ -74,7 +74,6 @@ app_images = [{
     # velero
     '{local_hostname}:{registry_port}/velero/velero:v1.7.1',
     '{local_hostname}:{registry_port}/velero/velero-plugin-for-aws:v1.2.1',
-    '{local_hostname}:{registry_port}/kubeoperator/velero:1.4.2-2b9dce65-aliyun',
     '{local_hostname}:{registry_port}/kubeoperator/velero-plugin-alibabacloud:v1.0.0-2d33b89'
 },
     {
