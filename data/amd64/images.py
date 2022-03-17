@@ -116,10 +116,10 @@ storage_images = {
     'rook_csi_snapshotter_image': '{local_hostname}:{registry_port}/k8scsi/csi-snapshotter:{rook_csi_snapshotter_version}',
     'rook_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{rook_csi_attacher_version}',
     # oceanstor csi
-    'huawei_csi_driver_image': '{local_hostname}:{registry_port}/kubeoperator/huawei-csi:{huawei_csi_driver_version}',
-    'huawei_csi_provisioner_image': '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{huawei_csi_provisioner_version}',
-    'huawei_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{huawei_csi_attacher_version}',
-    'huawei_csi_node_driver_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{huawei_csi_node_driver_registrar_version}',
+    #'huawei_csi_driver_image': '{local_hostname}:{registry_port}/kubeoperator/huawei-csi:{huawei_csi_driver_version}',
+    #'huawei_csi_provisioner_image': '{local_hostname}:{registry_port}/k8scsi/csi-provisioner:{huawei_csi_provisioner_version}',
+    #'huawei_csi_attacher_image': '{local_hostname}:{registry_port}/k8scsi/csi-attacher:{huawei_csi_attacher_version}',
+    #'huawei_csi_node_driver_registrar_image': '{local_hostname}:{registry_port}/k8scsi/csi-node-driver-registrar:{huawei_csi_node_driver_registrar_version}',
     # vsphere csi
     'vsphere_csi_driver_image': '{local_hostname}:{registry_port}/kubeoperator/vsphere-csi-driver:{vsphere_csi_version}',
     'vsphere_csi_syncer_image': '{local_hostname}:{registry_port}/kubeoperator/vsphere-csi-syncer:{vsphere_csi_version}',
