@@ -91,7 +91,7 @@ v1_18_4 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -164,7 +164,7 @@ v1_18_6 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -237,7 +237,7 @@ v1_18_8 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -310,7 +310,7 @@ v1_18_10 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -383,7 +383,7 @@ v1_18_12 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -456,7 +456,7 @@ v1_18_14 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -529,7 +529,7 @@ v1_18_15 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -602,7 +602,7 @@ v1_18_18 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -675,7 +675,7 @@ v1_18_20 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -748,7 +748,7 @@ v1_20_4 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -821,7 +821,7 @@ v1_20_6 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -894,7 +894,7 @@ v1_20_8 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -967,7 +967,7 @@ v1_20_10 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1040,7 +1040,7 @@ v1_20_12 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1113,7 +1113,7 @@ v1_20_14 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1186,7 +1186,7 @@ v1_22_6 =  {
     # metrics-server版本
     'metrics_server_version':'v0.5.0',
     # istio版本
-    'istio_version': '1.8.0',
+    'istio_version': '1.11.8',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
