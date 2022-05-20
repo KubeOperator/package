@@ -30,7 +30,7 @@ v1_18_4 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -102,7 +102,7 @@ v1_18_6 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    '': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -174,7 +174,7 @@ v1_18_8 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -246,7 +246,7 @@ v1_18_10 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -318,7 +318,7 @@ v1_18_12 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -390,7 +390,7 @@ v1_18_14 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -462,7 +462,7 @@ v1_18_15 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -534,7 +534,7 @@ v1_18_18 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -606,7 +606,7 @@ v1_18_20 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -678,7 +678,7 @@ v1_20_4 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -750,7 +750,7 @@ v1_20_6 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -822,7 +822,7 @@ v1_20_8 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -894,7 +894,7 @@ v1_20_10 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -966,7 +966,7 @@ v1_20_12 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
@@ -1038,7 +1038,7 @@ v1_20_14 =  {
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
     'kube_bench_version': 'v0.6.5',
-    'runc_version': 'v1.0.0-rc91',
+    'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
