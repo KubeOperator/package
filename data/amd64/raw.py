@@ -10,8 +10,7 @@ raw_url = {
     'containerd_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/containerd/{containerd_version}/{architectures}/containerd-{containerd_version}-linux-{architectures}.tar.gz',
     'crictl_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/crictl/{crictl_version}/{architectures}/crictl-{crictl_version}-linux-{architectures}.tar.gz',
     'runc_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/runc/{runc_version}/{architectures}/runc.{architectures}',
-    'cni_calico_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/cni-plugin/{cni_calico_version}/{architectures}/calico-{architectures}',
-    'cni_calico_ipam_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/cni-plugin/{cni_calico_version}/{architectures}/calico-ipam-{architectures}',
+    'calicoctl_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/calicoctl/{calico_version}/calicoctl-linux-{architectures}',
     # ----------------------- 离线镜像文件下载地址 ----------------------
     'kube_controller_manager_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/k8s/{k8s_version}/{architectures}/kube-controller-manager.tar',
     'kube_apiserver_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/k8s/{k8s_version}/{architectures}/kube-apiserver.tar',
@@ -25,9 +24,9 @@ raw_url = {
     'helm2_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/{helm_v2_version}/helm-{helm_v2_version}-linux-{architectures}.tar.gz',
     'helm3_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/helm/{helm_v3_version}/helm-{helm_v3_version}-linux-{architectures}.tar.gz',
     # ----------------------- Openstack VSphere 镜像下载地址 --------------------
-    'openstack_image_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/openstack/kubeoperator_centos_7.6.1810-1.qcow2',
-    'vsphere_vmdk_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-1.vmdk',
-    'vsphere_ovf_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf',
+    #'openstack_image_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/openstack/kubeoperator_centos_7.6.1810-1.qcow2',
+    #'vsphere_vmdk_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-1.vmdk',
+    #'vsphere_ovf_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/vsphere/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf',
     #'fusioncompute_vhd_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/fusioncompute/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810-vda.vhd',
     #'fusioncompute_ovf_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/terraform/images/fusioncompute/kubeoperator_centos_7.6.1810/kubeoperator_centos_7.6.1810.ovf',
     # ----------------------- Ubuntu chrony 安装包下载地址 --------------------

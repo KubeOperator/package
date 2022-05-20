@@ -10,8 +10,7 @@ raw_url = {
     'containerd_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/containerd/{containerd_version}/{architectures}/containerd-{containerd_version}-linux-{architectures}.tar.gz',
     'crictl_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/crictl/{crictl_version}/{architectures}/crictl-{crictl_version}-linux-{architectures}.tar.gz',
     'runc_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/runc/{runc_version}/{architectures}/runc.{architectures}',
-    'cni_calico_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/cni-plugin/{cni_calico_version}/{architectures}/calico-{architectures}',
-    'cni_calico_ipam_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/cni-plugin/{cni_calico_version}/{architectures}/calico-ipam-{architectures}',
+    'calicoctl_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/calicoctl/{calico_version}/calicoctl-linux-{architectures}',
     # ----------------------- 离线镜像文件下载地址 ----------------------
     'kube_controller_manager_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/k8s/{k8s_version}/{architectures}/kube-controller-manager.tar',
     'kube_apiserver_download_url': 'http://{local_hostname}:{repo_port}/repository/oss-proxy/k8s/{k8s_version}/{architectures}/kube-apiserver.tar',
