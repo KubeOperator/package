@@ -251,7 +251,9 @@ def image_download(k8s_version):
 
 
 def run():
-    create_yum_repo()
+    # create_yum_repo()
+    # rpm_download()
+    
     # kube_version = common.get('kube_version').split(",")
     # for i in kube_version:
     #     if common.get('plat_form') != "ubuntu":
@@ -261,4 +263,3 @@ def run():
     if common.get('plat_form') != "ubuntu":
         raw_download(kube_version)
         image_download(kube_version)
-    rpm_download()
