@@ -103,6 +103,8 @@ app_images = [{
 storage_images = {
     # ceph-rbd provisioner
     'rbd_provisioner_image': '{local_hostname}:{registry_port}/external_storage/rbd-provisioner:{rbd_provisioner_version}',
+    # cephfs provisioner
+    'cephfs_provisioner_image': '{local_hostname}:{registry_port}/external_storage/cephfs-provisioner:{cephfs_provisioner_version}',
     # nfs provisioner
     'nfs_client_provisioner_image': '{local_hostname}:{registry_port}/kubeoperator/nfs-client-provisioner:{nfs_provisioner_version}',
     # rook ceph

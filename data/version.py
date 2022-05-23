@@ -34,6 +34,7 @@ v1_18_4 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -106,6 +107,7 @@ v1_18_6 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -178,6 +180,7 @@ v1_18_8 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -250,6 +253,7 @@ v1_18_10 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -322,6 +326,7 @@ v1_18_12 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -394,6 +399,7 @@ v1_18_14 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -466,6 +472,7 @@ v1_18_15 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -538,6 +545,7 @@ v1_18_18 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -610,6 +618,7 @@ v1_18_20 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -682,6 +691,7 @@ v1_20_4 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -754,6 +764,7 @@ v1_20_6 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -826,6 +837,7 @@ v1_20_8 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -898,6 +910,7 @@ v1_20_10 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -970,6 +983,7 @@ v1_20_12 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -1042,6 +1056,7 @@ v1_20_14 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -1114,6 +1129,7 @@ v1_22_6 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
@@ -1186,6 +1202,7 @@ v1_22_8 =  {
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
     'rbd_provisioner_version': 'v2.1.1-k8s1.11',
+    'cephfs_provisioner_version': "v2.1.0-k8s1.11",
     'nfs_provisioner_version': 'v3.1.0-k8s1.11',
     'vsphere_csi_version': 'v1.0.3',
     'govc_version': 'v0.23.0',
