@@ -29,7 +29,7 @@ v1_18_4 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -102,7 +102,7 @@ v1_18_6 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     '': 'v1.0.0-rc91',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -175,7 +175,7 @@ v1_18_8 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -248,7 +248,7 @@ v1_18_10 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -321,7 +321,7 @@ v1_18_12 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -394,7 +394,7 @@ v1_18_14 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -467,7 +467,7 @@ v1_18_15 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -540,7 +540,7 @@ v1_18_18 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -613,7 +613,7 @@ v1_18_20 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -686,7 +686,7 @@ v1_20_4 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -759,7 +759,7 @@ v1_20_6 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -832,7 +832,7 @@ v1_20_8 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -905,7 +905,7 @@ v1_20_10 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -978,7 +978,7 @@ v1_20_12 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -1051,7 +1051,7 @@ v1_20_14 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.18.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -1124,7 +1124,7 @@ v1_22_6 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.23.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
@@ -1197,7 +1197,7 @@ v1_22_8 =  {
     'busybox_version': '1.28',
     'crictl_version': 'v1.23.0',
     'npd_version': 'v0.8.1',
-    'kube_bench_version': 'v0.6.5',
+    'kube_bench_version': 'v0.6.8',
     'runc_version': 'v1.1',
     'cni_version': 'v0.8.6',
     # 存储类镜像版本设置
