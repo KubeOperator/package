@@ -36,38 +36,36 @@ k8s_images = {
 }
 
 app_images = [{
-    # kubeapps version: 5.0.1, appVersion: 2.0.1
-    '{local_hostname}:{registry_port}/bitnami/kubeapps-apprepository-controller:2.0.1-scratch-r0',
-    '{local_hostname}:{registry_port}/bitnami/kubeapps-assetsvc:2.0.1-scratch-r0',
-    '{local_hostname}:{registry_port}/bitnami/kubeapps-dashboard:2.0.1-debian-10-r50',
-    '{local_hostname}:{registry_port}/bitnami/nginx:1.19.6-debian-10-r18',
-    '{local_hostname}:{registry_port}/bitnami/kubeapps-kubeops:2.0.1-scratch-r2',
-    '{local_hostname}:{registry_port}/bitnami/postgresql:11.10.0-debian-10-r24',
-    '{local_hostname}:{registry_port}/bitnami/kubeapps-asset-syncer:2.0.1-scratch-r0',
-    # chartmuseum version: 2.13.0, appVersion: 0.12.0
+    # kubeapps
+    '{local_hostname}:{registry_port}/bitnami/kubeapps-asset-syncer:2.4.2-scratch-r0',
+    '{local_hostname}:{registry_port}/bitnami/nginx:1.21.4-debian-10-r26',
+    '{local_hostname}:{registry_port}/bitnami/kubeapps-apprepository-controller:2.4.2-scratch-r0',
+    '{local_hostname}:{registry_port}/bitnami/kubeapps-dashboard:2.4.2-debian-10-r0',
+    '{local_hostname}:{registry_port}/bitnami/kubeapps-apis:2.4.2-debian-10-r1',
+    '{local_hostname}:{registry_port}/bitnami/kubeapps-kubeops:2.4.2-scratch-r0',
+    '{local_hostname}:{registry_port}/bitnami/postgresql:11.14.0-debian-10-r0',
+    # chartmuseum
     '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0',
-    # registry version: 1.9.3, appVersion: 2.7.1
+    # registry
     '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1',
-    # efk version: 1.0.0,appVersion: 7.6.2
+    # efk
     '{local_hostname}:{registry_port}/fluentd_elasticsearch/fluentd:v2.8.0',
     '{local_hostname}:{registry_port}/elasticsearch/elasticsearch:7.6.2',
-    # promethus version: 11.5.0 , appVersion: v2.20.1
-    '{local_hostname}:{registry_port}/prom/node-exporter:v1.0.1',
-    '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.5',
-    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.4.0',
-    '{local_hostname}:{registry_port}/prom/prometheus:v2.20.1',
-    # f5
-    '{local_hostname}:{registry_port}/kubeoperator/k8s-bigip-ctlr:1.9.2-amd64',
+    # promethus
+    '{local_hostname}:{registry_port}/dyrnq/kube-state-metrics:v2.4.1',
+    '{local_hostname}:{registry_port}/prometheus/node-exporter:v1.3.0',
+    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.5.0',
+    '{local_hostname}:{registry_port}/prometheus/prometheus:v2.34.0',
     # loki
-    '{local_hostname}:{registry_port}/grafana/loki:2.0.0',
-    '{local_hostname}:{registry_port}/grafana/promtail:2.0.0',
+    '{local_hostname}:{registry_port}/grafana/promtail:2.1.0',
+    '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
     # istio
     '{local_hostname}:{registry_port}/istio/pilot:{istio_version}',
     '{local_hostname}:{registry_port}/istio/proxyv2:{istio_version}',
     # grafana
-    '{local_hostname}:{registry_port}/grafana/grafana:7.3.3',
+    '{local_hostname}:{registry_port}/grafana/grafana:8.3.1',
     '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
-    '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}',
+    '{local_hostname}:{registry_port}/kubeoperator/busybox:1.31.1',
     # opa gatekeeper
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper:{gatekeeper_version}',
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper-crds:{gatekeeper_version}',
@@ -75,30 +73,7 @@ app_images = [{
     '{local_hostname}:{registry_port}/velero/velero:v1.7.1',
     '{local_hostname}:{registry_port}/velero/velero-plugin-for-aws:v1.2.1',
     '{local_hostname}:{registry_port}/kubeoperator/velero-plugin-alibabacloud:v1.0.0-2d33b89'
-},
-    {
-        # kubeapps
-        '{local_hostname}:{registry_port}/bitnami/kubeapps-asset-syncer:2.4.2-scratch-r0',
-        '{local_hostname}:{registry_port}/bitnami/nginx:1.21.4-debian-10-r26',
-        '{local_hostname}:{registry_port}/bitnami/kubeapps-apprepository-controller:2.4.2-scratch-r0',
-        '{local_hostname}:{registry_port}/bitnami/kubeapps-dashboard:2.4.2-debian-10-r0',
-        '{local_hostname}:{registry_port}/bitnami/kubeapps-apis:2.4.2-debian-10-r1',
-        '{local_hostname}:{registry_port}/bitnami/kubeapps-kubeops:2.4.2-scratch-r0',
-        '{local_hostname}:{registry_port}/bitnami/postgresql:11.14.0-debian-10-r0',
-        # loki version: 2.0.0 , appVersion: v2.0.0
-        '{local_hostname}:{registry_port}/grafana/promtail:2.1.0',
-        '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
-        # promethus
-        '{local_hostname}:{registry_port}/dyrnq/kube-state-metrics:v2.2.4',
-        '{local_hostname}:{registry_port}/prometheus/node-exporter:v1.3.0',
-        '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.5.0',
-        '{local_hostname}:{registry_port}/prometheus/prometheus:v2.31.1',
-        # grafana
-        '{local_hostname}:{registry_port}/grafana/grafana:8.3.1',
-        '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
-        '{local_hostname}:{registry_port}/kubeoperator/busybox:1.31.1'
-   }
-]
+}]
 
 storage_images = {
     # ceph-rbd provisioner

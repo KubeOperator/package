@@ -34,41 +34,26 @@ app_images = [{
     # registry
     '{local_hostname}:{registry_port}/kubeoperator/registry:2.7.1',
     # promethus
-    '{local_hostname}:{registry_port}/prom/node-exporter:v1.0.1',
-    '{local_hostname}:{registry_port}/carlosedp/kube-state-metrics:v1.9.5',
-    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.4.0',
-    '{local_hostname}:{registry_port}/prom/prometheus:v2.20.1',
+    '{local_hostname}:{registry_port}/dyrnq/kube-state-metrics:v2.4.1',
+    '{local_hostname}:{registry_port}/prometheus/node-exporter:v1.3.0',
+    '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.5.0',
+    '{local_hostname}:{registry_port}/prometheus/prometheus:v2.34.0',
     # loki
-    '{local_hostname}:{registry_port}/grafana/loki:2.0.0',
-    '{local_hostname}:{registry_port}/grafana/promtail:2.0.0',
+    '{local_hostname}:{registry_port}/grafana/promtail:2.1.0',
+    '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
     # chartmuseum
     '{local_hostname}:{registry_port}/kubeoperator/chartmuseum:v0.12.0',
     # grafana
-    '{local_hostname}:{registry_port}/grafana/grafana:7.3.3',
+    '{local_hostname}:{registry_port}/grafana/grafana:8.3.1',
     '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
-    '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}',
+    '{local_hostname}:{registry_port}/kubeoperator/busybox:1.31.1',
     # opa gatekeeper
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper:{gatekeeper_version}',
     '{local_hostname}:{registry_port}/openpolicyagent/gatekeeper-crds:{gatekeeper_version}',
     # velero
     '{local_hostname}:{registry_port}/velero/velero:v1.7.1',
     '{local_hostname}:{registry_port}/velero/velero-plugin-for-aws:v1.2.1'
-},
-    {
-        # loki
-        '{local_hostname}:{registry_port}/grafana/promtail:2.1.0',
-        '{local_hostname}:{registry_port}/grafana/loki:2.1.0',
-        # promethus
-        '{local_hostname}:{registry_port}/dyrnq/kube-state-metrics:v2.2.4',
-        '{local_hostname}:{registry_port}/prometheus/node-exporter:v1.3.0',
-        '{local_hostname}:{registry_port}/jimmidyson/configmap-reload:v0.5.0',
-        '{local_hostname}:{registry_port}/prometheus/prometheus:v2.31.1',
-        # grafana
-        '{local_hostname}:{registry_port}/grafana/grafana:8.3.1',
-        '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
-        '{local_hostname}:{registry_port}/kubeoperator/busybox:1.31.1'
-    }
-]
+}]
 
 storage_images = {
     # nfs provisioner
