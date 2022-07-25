@@ -1215,7 +1215,7 @@ v1_22_6 =  {
     # helm v3 版本
     'helm_v3_version':'v3.8.0',
     # nginx-ingress版本
-    'nginx_ingress_version':'v1.1.1',
+    'nginx_ingress_version':'v1.2.1',
     # traefik-ingress版本
     'traefik_ingress_version':'v2.6.1',
     # metrics-server版本
@@ -1290,7 +1290,7 @@ v1_22_8 =  {
     # helm v3 版本
     'helm_v3_version':'v3.8.0',
     # nginx-ingress版本
-    'nginx_ingress_version':'v1.1.1',
+    'nginx_ingress_version':'v1.2.1',
     # traefik-ingress版本
     'traefik_ingress_version':'v2.6.1',
     # metrics-server版本
@@ -1365,7 +1365,7 @@ v1_22_10 =  {
     # helm v3 版本
     'helm_v3_version':'v3.8.0',
     # nginx-ingress版本
-    'nginx_ingress_version':'v1.1.1',
+    'nginx_ingress_version':'v1.2.1',
     # traefik-ingress版本
     'traefik_ingress_version':'v2.6.1',
     # metrics-server版本
@@ -1440,7 +1440,7 @@ v1_22_12 =  {
     # helm v3 版本
     'helm_v3_version':'v3.8.0',
     # nginx-ingress版本
-    'nginx_ingress_version':'v1.1.1',
+    'nginx_ingress_version':'v1.2.1',
     # traefik-ingress版本
     'traefik_ingress_version':'v2.6.1',
     # metrics-server版本
