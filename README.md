@@ -1,13 +1,9 @@
-# KubeOpererator 3.0 离线部署包
+# KubeOperator 离线部署包
 
-KubeOperator 3.0 支持在完全离线环境下部署 K8s 集群。KubeOperator 内置 Nexus 服务，用来提供部署和管理 K8s 所需要的介质，包括：
+[KubeOperator](https://github.com/KubeOperator/KubeOperator) 是一个开源的轻量级 Kubernetes 发行版，专注于帮助企业规划、部署和运营生产级别的 K8s 集群。
 
-- Docker 镜像
-- Rpm 包
-- 二进制文件等
+该项目将构建离线环境下所需的介质，并导入到 KubeOperator 内置 Nexus 制品库中。
 
-本工程将构建离线环境下所需的介质，并导入到 KubeOperator 内置 Nexus 制品库。
+## 问题反馈
 
-使用: `# python3 build.py k8s_version`
-
-例:   `# python3 build.py v1.18.6,v1.18.10 ...`
+如果您在使用过程中遇到什么问题，或有进一步的需求需要反馈，请提交 GitHub Issue 到 [KubeOperator 项目的主仓库](https://github.com/KubeOperator/KubeOperator/issues)
