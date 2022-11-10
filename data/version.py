@@ -97,6 +97,8 @@ v1_18_4 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -172,6 +174,8 @@ v1_18_6 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -247,6 +251,8 @@ v1_18_8 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -322,6 +328,8 @@ v1_18_10 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -397,6 +405,8 @@ v1_18_12 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -472,6 +482,8 @@ v1_18_14 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -547,6 +559,8 @@ v1_18_15 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -622,6 +636,8 @@ v1_18_18 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -697,6 +713,8 @@ v1_18_20 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -772,6 +790,8 @@ v1_20_4 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -847,6 +867,8 @@ v1_20_6 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -922,6 +944,8 @@ v1_20_8 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -997,6 +1021,8 @@ v1_20_10 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1072,6 +1098,8 @@ v1_20_12 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1147,6 +1175,8 @@ v1_20_14 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1222,6 +1252,8 @@ v1_22_6 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1297,6 +1329,8 @@ v1_22_8 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1372,6 +1406,8 @@ v1_22_10 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }
@@ -1447,6 +1483,8 @@ v1_22_12 =  {
     'metrics_server_version':'v0.5.0',
     # istio版本
     'istio_version': '1.11.8',
+    # metallb版本
+    'metallb_version': 'v0.13.7',
     # opa gatekeeper版本
     'gatekeeper_version': 'v3.7.0'
 }

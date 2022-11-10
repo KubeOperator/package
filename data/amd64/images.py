@@ -2,36 +2,36 @@
 # coding: utf-8
 
 k8s_images = {
-    # Pod image 地址
+    # coredns
     'coredns_image_name': '{local_hostname}:{registry_port}/coredns/coredns:{coredns_version}',
-    # dns cache image 地址
+    # dns cache
     'dns_cache_image': '{local_hostname}:{registry_port}/kubeoperator/k8s-dns-node-cache:{dns_cache_version}',
-    # 基础容器 image 地址
+    # sandbox
     'sandbox_image': '{local_hostname}:{registry_port}/kubeoperator/pause:{pause_version}',
-    # busybox_image image 地址
+    # busybox
     'busybox_image': '{local_hostname}:{registry_port}/kubeoperator/busybox:{busybox_version}',
-    # calico 相关镜像
+    # calico
     'calico_typha_image': '{local_hostname}:{registry_port}/calico/typha:{calico_version}',
     'calico_cni_image': '{local_hostname}:{registry_port}/calico/cni:{calico_version}',
     'calico_node_image': '{local_hostname}:{registry_port}/calico/node:{calico_version}',
     'calico_kube_controllers_image': '{local_hostname}:{registry_port}/calico/kube-controllers:{calico_version}',
     'calico_pod2daemon_flexvol_image': '{local_hostname}:{registry_port}/calico/pod2daemon-flexvol:{calico_version}',
     'calicoctl_image': '{local_hostname}:{registry_port}/calico/ctl:{calico_version}',
-    # flannel image 地址
+    # flannel
     'flannel_image': '{local_hostname}:{registry_port}/coreos/flannel:{flannel_version}',
-    # cilium image 地址
+    # cilium
     'cilium_image': '{local_hostname}:{registry_port}/cilium/cilium:{cilium_version}',
     'cilium_operator_image': '{local_hostname}:{registry_port}/cilium/operator-generic:{cilium_version}',
-    # ingress-controller 镜像地址
+    # ingress-controller
     'nginx_ingress_image': '{local_hostname}:{registry_port}/kubeoperator/ingress-nginx-controller:{nginx_ingress_version}',
     'traefik_ingress_image': '{local_hostname}:{registry_port}/traefik:{traefik_ingress_version}',
-    # metrics-server image
+    # metrics-server
     'metrics_server_image': '{local_hostname}:{registry_port}/kubeoperator/metrics-server:{metrics_server_version}',
-    # npd image 地址
+    # npd
     'npd_image': '{local_hostname}:{registry_port}/kubeoperator/node-problem-detector:{npd_version}',
-    # kube-bench image
+    # kube-bench
     'kube_bench': '{local_hostname}:{registry_port}/kubeoperator/kube-bench:{kube_bench_version}',
-    # helm2 tiller image
+    # helm2 tiller
     'helm_tiller_image': '{local_hostname}:{registry_port}/kubeoperator/tiller:{helm_v2_version}'
 }
 
@@ -62,6 +62,9 @@ app_images = [{
     # istio
     '{local_hostname}:{registry_port}/istio/pilot:{istio_version}',
     '{local_hostname}:{registry_port}/istio/proxyv2:{istio_version}',
+    # metallb
+    '{local_hostname}:{registry_port}/metallb/controller:{metallb_version}',
+    '{local_hostname}:{registry_port}/metallb/speaker:{metallb_version}',
     # grafana
     '{local_hostname}:{registry_port}/grafana/grafana:8.3.1',
     '{local_hostname}:{registry_port}/curlimages/curl:7.73.0',
